@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B88E84752503A4E200CA0C88 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E84742503A4E200CA0C88 /* MainViewModel.swift */; };
+		B88E84772503A5CF00CA0C88 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E84762503A5CF00CA0C88 /* DetailViewController.swift */; };
+		B88E847A2503A6BA00CA0C88 /* MainViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E84792503A6BA00CA0C88 /* MainViewControllerView.swift */; };
+		B8E061FE2503A82F00AC969F /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E061FD2503A82F00AC969F /* HomeTableViewCell.swift */; };
+		B8E062002503AA8700AC969F /* NavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E061FF2503AA8700AC969F /* NavigationControllerExtension.swift */; };
 		B8F51CD124FE8AB20093F1D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F51CD024FE8AB20093F1D6 /* AppDelegate.swift */; };
-		B8F51CD324FE8AB20093F1D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F51CD224FE8AB20093F1D6 /* SceneDelegate.swift */; };
 		B8F51CD524FE8AB20093F1D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F51CD424FE8AB20093F1D6 /* ViewController.swift */; };
-		B8F51CD824FE8AB20093F1D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F51CD624FE8AB20093F1D6 /* Main.storyboard */; };
 		B8F51CDA24FE8AB60093F1D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F51CD924FE8AB60093F1D6 /* Assets.xcassets */; };
 		B8F51CDD24FE8AB60093F1D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F51CDB24FE8AB60093F1D6 /* LaunchScreen.storyboard */; };
 		B8F51CE824FE8AB70093F1D6 /* RickAndJamesTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F51CE724FE8AB70093F1D6 /* RickAndJamesTestTests.swift */; };
@@ -35,11 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B88E84742503A4E200CA0C88 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		B88E84762503A5CF00CA0C88 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B88E84792503A6BA00CA0C88 /* MainViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerView.swift; sourceTree = "<group>"; };
+		B8E061FD2503A82F00AC969F /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		B8E061FF2503AA8700AC969F /* NavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtension.swift; sourceTree = "<group>"; };
 		B8F51CCD24FE8AB20093F1D6 /* RickAndJamesTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndJamesTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F51CD024FE8AB20093F1D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B8F51CD224FE8AB20093F1D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B8F51CD424FE8AB20093F1D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B8F51CD724FE8AB20093F1D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B8F51CD924FE8AB60093F1D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8F51CDC24FE8AB60093F1D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8F51CDE24FE8AB60093F1D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +82,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B88E84782503A6AC00CA0C88 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B8F51CD424FE8AB20093F1D6 /* ViewController.swift */,
+				B88E84792503A6BA00CA0C88 /* MainViewControllerView.swift */,
+				B88E84742503A4E200CA0C88 /* MainViewModel.swift */,
+				B8E061FD2503A82F00AC969F /* HomeTableViewCell.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		B8F51CC424FE8AB20093F1D6 = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +116,13 @@
 		B8F51CCF24FE8AB20093F1D6 /* RickAndJamesTest */ = {
 			isa = PBXGroup;
 			children = (
+				B88E84782503A6AC00CA0C88 /* Main */,
 				B8F51CD024FE8AB20093F1D6 /* AppDelegate.swift */,
-				B8F51CD224FE8AB20093F1D6 /* SceneDelegate.swift */,
-				B8F51CD424FE8AB20093F1D6 /* ViewController.swift */,
-				B8F51CD624FE8AB20093F1D6 /* Main.storyboard */,
 				B8F51CD924FE8AB60093F1D6 /* Assets.xcassets */,
 				B8F51CDB24FE8AB60093F1D6 /* LaunchScreen.storyboard */,
 				B8F51CDE24FE8AB60093F1D6 /* Info.plist */,
+				B88E84762503A5CF00CA0C88 /* DetailViewController.swift */,
+				B8E061FF2503AA8700AC969F /* NavigationControllerExtension.swift */,
 			);
 			path = RickAndJamesTest;
 			sourceTree = "<group>";
@@ -234,7 +251,6 @@
 			files = (
 				B8F51CDD24FE8AB60093F1D6 /* LaunchScreen.storyboard in Resources */,
 				B8F51CDA24FE8AB60093F1D6 /* Assets.xcassets in Resources */,
-				B8F51CD824FE8AB20093F1D6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +275,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8E061FE2503A82F00AC969F /* HomeTableViewCell.swift in Sources */,
+				B88E847A2503A6BA00CA0C88 /* MainViewControllerView.swift in Sources */,
 				B8F51CD524FE8AB20093F1D6 /* ViewController.swift in Sources */,
+				B8E062002503AA8700AC969F /* NavigationControllerExtension.swift in Sources */,
 				B8F51CD124FE8AB20093F1D6 /* AppDelegate.swift in Sources */,
-				B8F51CD324FE8AB20093F1D6 /* SceneDelegate.swift in Sources */,
+				B88E84752503A4E200CA0C88 /* MainViewModel.swift in Sources */,
+				B88E84772503A5CF00CA0C88 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +317,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B8F51CD624FE8AB20093F1D6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B8F51CD724FE8AB20093F1D6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B8F51CDB24FE8AB60093F1D6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -366,7 +378,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +432,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -436,14 +448,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RickAndJamesTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.salgados.RickAndJamesTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -453,14 +467,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RickAndJamesTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.salgados.RickAndJamesTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
