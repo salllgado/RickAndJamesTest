@@ -65,7 +65,7 @@ class MainTableViewCell: UITableViewCell {
         photoView.trailingAnchor.constraint(equalTo: imageView.trailingAnchor).isActive = true
         
         let title = UILabel()
-        title.font = UIFont.systemFont(ofSize: 16, weight: .black)
+        title.font = UIFont.systemFont(ofSize: 24, weight: .black)
         title.translatesAutoresizingMaskIntoConstraints = false
         title.textColor = .white
         title.numberOfLines = 0
@@ -82,14 +82,14 @@ class MainTableViewCell: UITableViewCell {
         view.addSubview(statusView)
         
         statusView.backgroundColor = character?.status == "Alive" ? .green : .gray
-        statusView.layer.cornerRadius = 8/2
+        statusView.layer.cornerRadius = 10/2
         
-        statusView.heightAnchor.constraint(equalToConstant: 8).isActive = true
-        statusView.widthAnchor.constraint(equalToConstant: 8).isActive = true
+        statusView.heightAnchor.constraint(equalToConstant: 10).isActive = true
+        statusView.widthAnchor.constraint(equalToConstant: 10).isActive = true
         photoView.trailingAnchor.constraint(equalTo: statusView.leadingAnchor, constant: -16).isActive = true
                 
         let subtitle = UILabel()
-        subtitle.font = UIFont.systemFont(ofSize: 13, weight: .medium)
+        subtitle.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         subtitle.translatesAutoresizingMaskIntoConstraints = false
         subtitle.textColor = .white
         subtitle.numberOfLines = 0

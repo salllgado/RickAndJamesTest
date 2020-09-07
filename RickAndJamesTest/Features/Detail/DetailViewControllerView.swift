@@ -33,7 +33,7 @@ class DetailViewControllerView: UIView {
     private lazy var characterNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.boldSystemFont(ofSize: 24)
+        label.font = UIFont.systemFont(ofSize: 24, weight: .black)
         label.textColor = .white
         
         return label
@@ -104,7 +104,7 @@ class DetailViewControllerView: UIView {
         
         // Image view setup
         contentView.addSubview(imageView)
-        imageView.heightAnchor.constraint(equalToConstant: 120).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 180).isActive = true
         imageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20).isActive = true
         imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20).isActive = true
         imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20).isActive = true
