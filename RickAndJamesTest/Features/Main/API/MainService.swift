@@ -15,6 +15,10 @@ struct InfoResult: Decodable {
     let prev: String?
 }
 
+struct CharacterLocationResult: Decodable {
+    let name: String
+}
+
 struct CharacterResult: Decodable {
     let id: Int
     let name: String
@@ -22,7 +26,7 @@ struct CharacterResult: Decodable {
     let species: String // Human
     let gender: String
     let image: String
-    
+    let location: CharacterLocationResult
 }
 
 struct CharacteresResult: Decodable {
