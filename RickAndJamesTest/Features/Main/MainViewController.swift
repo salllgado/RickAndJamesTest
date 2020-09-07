@@ -61,6 +61,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigationDelegate?.navigateToDetail()
+        tableView.deselectRow(at: indexPath, animated: true)
+        navigationDelegate?.navigateToDetail(character: viewModel.characteres[indexPath.row])
     }
 }

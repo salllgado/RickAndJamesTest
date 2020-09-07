@@ -9,7 +9,7 @@
 import Foundation
 
 protocol DetailViewModable: class {
-    var data: [String] { get }
+    var character: CharacterResult { get }
     var delegate: DetailViewControllerDelegate? { get set }
     
     func fetchData()
@@ -21,12 +21,14 @@ protocol DetailViewControllerDelegate: class {
 
 class DetailViewModel: DetailViewModable {
     
-    private (set) var data: [String] = []
+    private (set) var character: CharacterResult
     var delegate: DetailViewControllerDelegate?
     
+    init(character: CharacterResult) {
+        self.character = character
+    }
+    
     func fetchData() {
-        data = ["Rick", "Simpsons"]
-        
         delegate?.reloadUI()
     }
 }

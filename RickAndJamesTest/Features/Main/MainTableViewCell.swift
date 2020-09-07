@@ -30,6 +30,8 @@ class MainTableViewCell: UITableViewCell {
     }
     
     private func initView() {
+        backgroundColor = Colors.tableViewBackgroundColor.uiColor
+        
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .darkGray
@@ -44,7 +46,6 @@ class MainTableViewCell: UITableViewCell {
         
         let photoView = UIView()
         photoView.translatesAutoresizingMaskIntoConstraints = false
-        photoView.backgroundColor = .black
         
         view.addSubview(photoView)
         photoView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
@@ -75,6 +76,18 @@ class MainTableViewCell: UITableViewCell {
         photoView.trailingAnchor.constraint(equalTo: title.leadingAnchor, constant: -16).isActive = true
         title.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
         
+        let statusView = UIView()
+        statusView.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(statusView)
+        
+        statusView.backgroundColor = character?.status == "Alive" ? .green : .gray
+        statusView.layer.cornerRadius = 8/2
+        
+        statusView.heightAnchor.constraint(equalToConstant: 8).isActive = true
+        statusView.widthAnchor.constraint(equalToConstant: 8).isActive = true
+        photoView.trailingAnchor.constraint(equalTo: statusView.leadingAnchor, constant: -16).isActive = true
+                
         let subtitle = UILabel()
         subtitle.font = UIFont.systemFont(ofSize: 13, weight: .medium)
         subtitle.translatesAutoresizingMaskIntoConstraints = false
@@ -85,8 +98,9 @@ class MainTableViewCell: UITableViewCell {
         
         view.addSubview(subtitle)
         subtitle.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 4).isActive = true
-        photoView.trailingAnchor.constraint(equalTo: subtitle.leadingAnchor, constant: -16).isActive = true
+        statusView.trailingAnchor.constraint(equalTo: subtitle.leadingAnchor, constant: -6).isActive = true
         subtitle.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
         subtitle.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor, constant: -4).isActive = true
+        statusView.centerYAnchor.constraint(equalTo: subtitle.centerYAnchor).isActive = true
     }
 }

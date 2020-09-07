@@ -25,6 +25,7 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
+        presenter.setNavigationTheme()
         window.rootViewController = presenter
         mainCoordinator?.start()
         window.makeKeyAndVisible()

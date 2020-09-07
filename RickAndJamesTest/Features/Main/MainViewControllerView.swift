@@ -16,7 +16,7 @@ class MainViewControllerView: UIView {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorColor = .clear
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = Colors.tableViewBackgroundColor.uiColor
         tableView.rowHeight = 120
         
         return tableView
@@ -35,7 +35,6 @@ class MainViewControllerView: UIView {
     
     
     private func initView() {
-        backgroundColor = .darkGray
         
         addSubview(tableView)
         

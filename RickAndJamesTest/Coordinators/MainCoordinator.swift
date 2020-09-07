@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MainNavigationDelegate: Any {
-    func navigateToDetail()
+    func navigateToDetail(character: CharacterResult)
 }
 
 class MainCoordinator: Coordinator {
@@ -22,7 +22,6 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-        presenter.navigationItem.backBarButtonItem?.title = nil
         let viewModel = MainViewModel()
         let viewController = MainViewController(viewModel: viewModel, navigationDelegate: self)
         viewModel.delegate = viewController
@@ -34,8 +33,8 @@ class MainCoordinator: Coordinator {
 
 extension MainCoordinator: MainNavigationDelegate {
     
-    func navigateToDetail() {
-        let viewModel = DetailViewModel()
+    func navigateToDetail(character: CharacterResult) {
+        let viewModel = DetailViewModel(character: character)
         let controller = DetailViewController(viewModel: viewModel)
         viewModel.delegate = controller
         presenter.pushViewController(controller, animated: true)

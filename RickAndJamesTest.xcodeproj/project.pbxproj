@@ -25,6 +25,7 @@
 		B5FADB2625067D84008983D4 /* CharacteresAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB2525067D84008983D4 /* CharacteresAPI.swift */; };
 		B5FADB2825067D9D008983D4 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB2725067D9D008983D4 /* MainService.swift */; };
 		B5FADB2C2506854B008983D4 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB2B2506854B008983D4 /* UIImageViewExtension.swift */; };
+		B5FADB2F2506C935008983D4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB2E2506C935008983D4 /* Colors.swift */; };
 		B88E84752503A4E200CA0C88 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E84742503A4E200CA0C88 /* MainViewModel.swift */; };
 		B88E84772503A5CF00CA0C88 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E84762503A5CF00CA0C88 /* DetailViewController.swift */; };
 		B88E847A2503A6BA00CA0C88 /* MainViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E84792503A6BA00CA0C88 /* MainViewControllerView.swift */; };
@@ -74,6 +75,7 @@
 		B5FADB2525067D84008983D4 /* CharacteresAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteresAPI.swift; sourceTree = "<group>"; };
 		B5FADB2725067D9D008983D4 /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
 		B5FADB2B2506854B008983D4 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		B5FADB2E2506C935008983D4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B88E84742503A4E200CA0C88 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		B88E84762503A5CF00CA0C88 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B88E84792503A6BA00CA0C88 /* MainViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerView.swift; sourceTree = "<group>"; };
@@ -213,6 +215,16 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		B5FADB2D2506C915008983D4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B8F51CD924FE8AB60093F1D6 /* Assets.xcassets */,
+				B8F51CDB24FE8AB60093F1D6 /* LaunchScreen.storyboard */,
+				B5FADB2E2506C935008983D4 /* Colors.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		B88E84782503A6AC00CA0C88 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,9 +265,8 @@
 				B51D3165250410A300F3F9D4 /* Extensions */,
 				B51D31632504106700F3F9D4 /* Features */,
 				B5FADB0E250676FC008983D4 /* Network */,
+				B5FADB2D2506C915008983D4 /* Resources */,
 				B51D316025040D9E00F3F9D4 /* Protocols */,
-				B8F51CD924FE8AB60093F1D6 /* Assets.xcassets */,
-				B8F51CDB24FE8AB60093F1D6 /* LaunchScreen.storyboard */,
 				B8F51CDE24FE8AB60093F1D6 /* Info.plist */,
 			);
 			path = RickAndJamesTest;
@@ -430,6 +441,7 @@
 				B5FADB152506776B008983D4 /* URLSessionProtocol.swift in Sources */,
 				B5FADB1B250677BE008983D4 /* URLSessionDataTask+URLSessionDataTaskProtocol.swift in Sources */,
 				B5FADB1D250677E5008983D4 /* ServiceProvider.swift in Sources */,
+				B5FADB2F2506C935008983D4 /* Colors.swift in Sources */,
 				B51D31692504117A00F3F9D4 /* DetailViewModel.swift in Sources */,
 				B5FADB2625067D84008983D4 /* CharacteresAPI.swift in Sources */,
 				B51D316225040DB300F3F9D4 /* Coordinator.swift in Sources */,
