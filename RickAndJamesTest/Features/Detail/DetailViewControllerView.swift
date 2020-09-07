@@ -1,24 +1,23 @@
 //
-//  MainViewControllerView.swift
+//  DetailViewControllerView.swift
 //  RickAndJamesTest
 //
-//  Created by Chrystian on 05/09/20.
+//  Created by Chrystian Salgado on 05/09/20.
 //  Copyright © 2020 Salgado Solutions. All rights reserved.
 //
 
 import UIKit
 
-class MainViewControllerView: UIView {
-    
-    typealias TableViewProtocol = UITableViewDataSource & UITableViewDelegate
+class DetailViewControllerView: UIView {
+
     private (set) var controller: TableViewProtocol
     
     lazy private (set) var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorColor = .clear
-        tableView.backgroundColor = .brown
-        tableView.rowHeight = 120
+        tableView.backgroundColor = .white
+        tableView.estimatedRowHeight = 80
         
         return tableView
     }()

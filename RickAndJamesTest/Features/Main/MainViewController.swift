@@ -8,13 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     private var viewModel: MainViewModable = MainViewModel()
+    private var navigationDelegate: MainNavigationDelegate?
+    
     private var loadingView: UIActivityIndicatorView?
     
-    init(viewModel: MainViewModable = MainViewModel()) {
+    init(viewModel: MainViewModable = MainViewModel(), navigationDelegate: MainNavigationDelegate?) {
         self.viewModel = viewModel
+        self.navigationDelegate = navigationDelegate
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -30,31 +33,34 @@ class ViewController: UIViewController {
         loadingView = self.setLoadingView()
         loadingView?.startAnimating()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-            self.viewModel.fetchData()
-            let _view = self.view as? MainViewControllerView
-            
-            _view?.tableView.reloadData()
-            self.loadingView?.stopAnimating()
-        }
+        viewModel.fetchData()
     }
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension MainViewController: MainViewControllerDelegate {
+    func reloadUI() {
+        let _view = self.view as? MainViewControllerView
+        _view?.tableView.reloadData()
+        
+        self.loadingView?.stopAnimating()
+    }
+}
+
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.data > 0 ? 1 : 0
+        return viewModel.characteres.count > 0 ? 1 : 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.data
+        return viewModel.characteres.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return HomeTableViewCell()
+        return MainTableViewCell(character: viewModel.characteres[indexPath.row])
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigationController?.pushViewController(DetailViewController(viewModel: DetailViewModel(customData: 60)), animated: true)
+        navigationDelegate?.navigateToDetail()
     }
 }

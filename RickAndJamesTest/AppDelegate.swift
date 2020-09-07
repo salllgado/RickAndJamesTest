@@ -8,6 +8,8 @@
 
 import UIKit
 
+typealias TableViewProtocol = UITableViewDataSource & UITableViewDelegate
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -16,12 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
         let window = UIWindow()
-        
-        let navigationController = UINavigationController(rootViewController: ViewController())
-//        navigationController.navigationBar.prefersLargeTitles = true
-        window.rootViewController = navigationController
+        let coordinator = AppCoordinator(window: window)
+        coordinator.start()
         self.window = window
-        window.makeKeyAndVisible()
         
         return true
     }
