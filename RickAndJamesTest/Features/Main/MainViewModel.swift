@@ -10,6 +10,9 @@ import Foundation
 
 protocol MainViewModable: class {
     var characteres: [CharacterResult] { get }
+    var nextPage: Bool { get }
+    var shouldShowLoadingCell: Bool { get }
+    
     var delegate: MainViewControllerDelegate? { get set }
     
     func fetchData()
@@ -19,18 +22,26 @@ protocol MainViewControllerDelegate: class {
     func reloadUI()
 }
 
-class MainViewModel: MainViewModable {
+class MainViewModel: MainViewModable, TableViewPagination {
     
     var characteres: [CharacterResult] = []
+    var nextPage: Bool = false
+    var shouldShowLoadingCell: Bool = true
+    var currentPage: Int = 1
+    var numberOfPages: Int = 1
+    
     var delegate: MainViewControllerDelegate?
     private lazy var service: MainService = MainService()
     
     func fetchData() {
-        service.getCharacteres { [ unowned self ] (result) in
+        service.getCharacteres(page: currentPage) { [ unowned self ] (result) in
             switch result {
             case .success(let successResult):
                 debugPrint(successResult)
                 self.characteres = successResult.character
+                self.nextPage = (successResult.info.next != nil) && successResult.info.count > successResult.character.count ? true : false
+                self.shouldShowLoadingCell = successResult.character.count < successResult.info.count
+                self.numberOfPages = successResult.info.count
                 
                 DispatchQueue.main.async {
                     self.delegate?.reloadUI()
@@ -40,4 +51,26 @@ class MainViewModel: MainViewModable {
             }
         }
     }
+    
+    func fetchNextData() {
+        currentPage += 1
+        
+        service.getCharacteres(page: currentPage) { [ unowned self ] (result) in
+            switch result {
+            case .success(let successResult):
+                debugPrint(successResult)
+                self.characteres += successResult.character
+                self.nextPage = (successResult.info.next != nil) && successResult.info.count > successResult.character.count ? true : false
+                self.shouldShowLoadingCell = successResult.character.count < successResult.info.count
+                self.numberOfPages = successResult.info.count
+                
+                DispatchQueue.main.async {
+                    self.delegate?.reloadUI()
+                }
+            case .failure(let err):
+                debugPrint(err)
+            }
+        }
+    }
+    
 }

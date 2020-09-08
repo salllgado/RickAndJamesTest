@@ -10,8 +10,6 @@ import UIKit
 
 let imageCache = NSCache<AnyObject, AnyObject>()
 
-// MARK: - Extension UIImageView -
-
 extension UIImageView {
     
     func cacheImage(urlString: String) {

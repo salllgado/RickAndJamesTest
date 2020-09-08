@@ -10,12 +10,12 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    private var viewModel: MainViewModable = MainViewModel()
+    private var viewModel: (MainViewModable & TableViewPagination) = MainViewModel()
     private var navigationDelegate: MainNavigationDelegate?
     
     private var loadingView: UIActivityIndicatorView?
     
-    init(viewModel: MainViewModable = MainViewModel(), navigationDelegate: MainNavigationDelegate?) {
+    init(viewModel: (MainViewModable & TableViewPagination) = MainViewModel(), navigationDelegate: MainNavigationDelegate?) {
         self.viewModel = viewModel
         self.navigationDelegate = navigationDelegate
         super.init(nibName: nil, bundle: nil)
@@ -30,6 +30,8 @@ class MainViewController: UIViewController {
         title = "The rick and morty api"
         view = MainViewControllerView(viewController: self)
         
+        UITableView.shouldShowLoadingCell = viewModel.shouldShowLoadingCell
+        
         loadingView = self.setLoadingView()
         loadingView?.startAnimating()
         
@@ -41,6 +43,7 @@ extension MainViewController: MainViewControllerDelegate {
     func reloadUI() {
         let _view = self.view as? MainViewControllerView
         _view?.tableView.reloadData()
+        UITableView.shouldShowLoadingCell = viewModel.shouldShowLoadingCell
         
         self.loadingView?.stopAnimating()
     }
@@ -53,11 +56,25 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.characteres.count
+        return UITableView.shouldShowLoadingCell ? viewModel.characteres.count + 1 : viewModel.characteres.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return MainTableViewCell(character: viewModel.characteres[indexPath.row])
+        let cell = viewModel.canSetLoading(when: indexPath, reach: viewModel.characteres.count, default: MainTableViewCell())
+        
+        if let mainTableViewCell = cell as? MainTableViewCell {
+            mainTableViewCell.displayUI(character: viewModel.characteres[indexPath.row])
+        }
+        
+        return cell
+    }
+}
+
+extension MainViewController {
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard viewModel.isLoadingIndexPath(indexPath, reach: viewModel.characteres.count) else { return }
+        viewModel.fetchNextData()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

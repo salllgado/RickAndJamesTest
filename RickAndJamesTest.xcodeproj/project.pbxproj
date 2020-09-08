@@ -12,6 +12,8 @@
 		B51D3167250410BE00F3F9D4 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51D3166250410BE00F3F9D4 /* MainCoordinator.swift */; };
 		B51D31692504117A00F3F9D4 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51D31682504117A00F3F9D4 /* DetailViewModel.swift */; };
 		B51D316C2504160700F3F9D4 /* DetailViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51D316B2504160700F3F9D4 /* DetailViewControllerView.swift */; };
+		B530B0AB250817000031EB41 /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530B0AA250817000031EB41 /* LoadingTableViewCell.swift */; };
+		B530B0AD250817220031EB41 /* TableViewPagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530B0AC250817220031EB41 /* TableViewPagination.swift */; };
 		B5FADB1125067732008983D4 /* ServiceTargetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB1025067731008983D4 /* ServiceTargetProtocol.swift */; };
 		B5FADB1325067757008983D4 /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB1225067757008983D4 /* URLSessionDataTaskProtocol.swift */; };
 		B5FADB152506776B008983D4 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB142506776B008983D4 /* URLSessionProtocol.swift */; };
@@ -25,6 +27,7 @@
 		B5FADB2825067D9D008983D4 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB2725067D9D008983D4 /* MainService.swift */; };
 		B5FADB2C2506854B008983D4 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB2B2506854B008983D4 /* UIImageViewExtension.swift */; };
 		B5FADB2F2506C935008983D4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB2E2506C935008983D4 /* Colors.swift */; };
+		B5FADB312506EE3D008983D4 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB302506EE3D008983D4 /* UITableViewExtensions.swift */; };
 		B88E84752503A4E200CA0C88 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E84742503A4E200CA0C88 /* MainViewModel.swift */; };
 		B88E84772503A5CF00CA0C88 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E84762503A5CF00CA0C88 /* DetailViewController.swift */; };
 		B88E847A2503A6BA00CA0C88 /* MainViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E84792503A6BA00CA0C88 /* MainViewControllerView.swift */; };
@@ -61,6 +64,8 @@
 		B51D3166250410BE00F3F9D4 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		B51D31682504117A00F3F9D4 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		B51D316B2504160700F3F9D4 /* DetailViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerView.swift; sourceTree = "<group>"; };
+		B530B0AA250817000031EB41 /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
+		B530B0AC250817220031EB41 /* TableViewPagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewPagination.swift; sourceTree = "<group>"; };
 		B5FADB1025067731008983D4 /* ServiceTargetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTargetProtocol.swift; sourceTree = "<group>"; };
 		B5FADB1225067757008983D4 /* URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocol.swift; sourceTree = "<group>"; };
 		B5FADB142506776B008983D4 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
@@ -74,6 +79,7 @@
 		B5FADB2725067D9D008983D4 /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
 		B5FADB2B2506854B008983D4 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		B5FADB2E2506C935008983D4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		B5FADB302506EE3D008983D4 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		B88E84742503A4E200CA0C88 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		B88E84762503A5CF00CA0C88 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B88E84792503A6BA00CA0C88 /* MainViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerView.swift; sourceTree = "<group>"; };
@@ -132,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				B51D316125040DB300F3F9D4 /* Coordinator.swift */,
+				B530B0AC250817220031EB41 /* TableViewPagination.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -160,6 +167,7 @@
 			children = (
 				B8E061FF2503AA8700AC969F /* NavigationControllerExtension.swift */,
 				B5FADB2B2506854B008983D4 /* UIImageViewExtension.swift */,
+				B5FADB302506EE3D008983D4 /* UITableViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -218,6 +226,7 @@
 				B8F51CD924FE8AB60093F1D6 /* Assets.xcassets */,
 				B8F51CDB24FE8AB60093F1D6 /* LaunchScreen.storyboard */,
 				B5FADB2E2506C935008983D4 /* Colors.swift */,
+				B530B0AA250817000031EB41 /* LoadingTableViewCell.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -428,16 +437,19 @@
 				B8F51CD524FE8AB20093F1D6 /* MainViewController.swift in Sources */,
 				B51D3167250410BE00F3F9D4 /* MainCoordinator.swift in Sources */,
 				B5FADB19250677A2008983D4 /* URLSession+URLSessionProtocol.swift in Sources */,
+				B530B0AB250817000031EB41 /* LoadingTableViewCell.swift in Sources */,
 				B8E062002503AA8700AC969F /* NavigationControllerExtension.swift in Sources */,
 				B51D315F25040D8100F3F9D4 /* AppCoordinator.swift in Sources */,
 				B51D316C2504160700F3F9D4 /* DetailViewControllerView.swift in Sources */,
 				B8F51CD124FE8AB20093F1D6 /* AppDelegate.swift in Sources */,
 				B88E84752503A4E200CA0C88 /* MainViewModel.swift in Sources */,
+				B530B0AD250817220031EB41 /* TableViewPagination.swift in Sources */,
 				B88E84772503A5CF00CA0C88 /* DetailViewController.swift in Sources */,
 				B5FADB152506776B008983D4 /* URLSessionProtocol.swift in Sources */,
 				B5FADB1B250677BE008983D4 /* URLSessionDataTask+URLSessionDataTaskProtocol.swift in Sources */,
 				B5FADB1D250677E5008983D4 /* ServiceProvider.swift in Sources */,
 				B5FADB2F2506C935008983D4 /* Colors.swift in Sources */,
+				B5FADB312506EE3D008983D4 /* UITableViewExtensions.swift in Sources */,
 				B51D31692504117A00F3F9D4 /* DetailViewModel.swift in Sources */,
 				B5FADB2625067D84008983D4 /* CharacteresAPI.swift in Sources */,
 				B51D316225040DB300F3F9D4 /* Coordinator.swift in Sources */,

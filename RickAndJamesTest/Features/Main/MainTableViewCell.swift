@@ -10,26 +10,15 @@ import UIKit
 
 class MainTableViewCell: UITableViewCell {
     
-    var character: CharacterResult?
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        initView()
-    }
-    
-    init(character: CharacterResult) {
-        self.character = character
-        super.init(style: .default, reuseIdentifier: nil)
-        
-        initView()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func initView() {
+    func displayUI(character: CharacterResult) {
         backgroundColor = Colors.tableViewBackgroundColor.uiColor
         
         let view = UIView()
@@ -55,7 +44,7 @@ class MainTableViewCell: UITableViewCell {
         
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.cacheImage(urlString: character?.image ?? "")
+        imageView.cacheImage(urlString: character.image)
         
         photoView.addSubview(imageView)
         
@@ -69,7 +58,7 @@ class MainTableViewCell: UITableViewCell {
         title.translatesAutoresizingMaskIntoConstraints = false
         title.textColor = .white
         title.numberOfLines = 0
-        title.text = character?.name
+        title.text = character.name
         
         view.addSubview(title)
         title.topAnchor.constraint(equalTo: view.topAnchor, constant: 8).isActive = true
@@ -81,7 +70,7 @@ class MainTableViewCell: UITableViewCell {
         
         view.addSubview(statusView)
         
-        statusView.backgroundColor = character?.status == "Alive" ? .green : .gray
+        statusView.backgroundColor = character.status == "Alive" ? .green : .gray
         statusView.layer.cornerRadius = 10/2
         
         statusView.heightAnchor.constraint(equalToConstant: 10).isActive = true
@@ -94,7 +83,7 @@ class MainTableViewCell: UITableViewCell {
         subtitle.textColor = .white
         subtitle.numberOfLines = 0
         subtitle.lineBreakMode = .byWordWrapping
-        subtitle.text = "\(character?.status ?? "") - \(character?.species ?? "")"
+        subtitle.text = "\(character.status) - \(character.species)"
         
         view.addSubview(subtitle)
         subtitle.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 4).isActive = true
