@@ -28,22 +28,31 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "The rick and morty api"
-        view = MainViewControllerView(viewController: self)
+        
+        let layout = MainViewControllerLayout(viewController: self)
+        layout.refreshControl.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
         
         UITableView.shouldShowLoadingCell = viewModel.shouldShowLoadingCell
+        view = layout
         
         loadingView = self.setLoadingView()
         loadingView?.startAnimating()
         
         viewModel.fetchData()
     }
+    
+    @objc private func refreshData(_ refreshControl: UIRefreshControl) {
+        viewModel.refreshData()
+    }
 }
 
 extension MainViewController: MainViewControllerDelegate {
+    
     func reloadUI() {
-        let _view = self.view as? MainViewControllerView
-        _view?.tableView.reloadData()
-        UITableView.shouldShowLoadingCell = viewModel.shouldShowLoadingCell
+        let layout = self.view as? MainViewControllerLayout
+        layout?.tableView.reloadData()
+        
+        if layout?.refreshControl.isRefreshing ?? false { layout?.refreshControl.endRefreshing() }
         
         self.loadingView?.stopAnimating()
     }

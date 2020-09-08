@@ -16,6 +16,7 @@ protocol MainViewModable: class {
     var delegate: MainViewControllerDelegate? { get set }
     
     func fetchData()
+    func refreshData()
 }
 
 protocol MainViewControllerDelegate: class {
@@ -50,6 +51,11 @@ class MainViewModel: MainViewModable, TableViewPagination {
                 debugPrint(err)
             }
         }
+    }
+    
+    func refreshData() {
+        currentPage = 1
+        fetchData()
     }
     
     func fetchNextData() {

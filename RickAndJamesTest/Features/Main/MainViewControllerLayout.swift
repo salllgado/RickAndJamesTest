@@ -1,5 +1,5 @@
 //
-//  MainViewControllerView.swift
+//  MainViewControllerLayout.swift
 //  RickAndJamesTest
 //
 //  Created by Chrystian on 05/09/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewControllerView: UIView {
+class MainViewControllerLayout: UIView {
     
     private (set) var controller: TableViewProtocol
     
@@ -20,6 +20,13 @@ class MainViewControllerView: UIView {
         tableView.rowHeight = 120
         
         return tableView
+    }()
+    
+    lazy private (set) var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = .white
+        
+        return refreshControl
     }()
     
     init(viewController: TableViewProtocol) {
@@ -45,5 +52,7 @@ class MainViewControllerView: UIView {
         tableView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        
+        tableView.addSubview(refreshControl)
     }
 }

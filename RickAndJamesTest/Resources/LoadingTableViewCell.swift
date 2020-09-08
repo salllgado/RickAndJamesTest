@@ -14,7 +14,7 @@ class LoadingTableViewCell: UITableViewCell {
         let indicator = UIActivityIndicatorView()
         indicator.color = UIColor.white
         indicator.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
-        indicator.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        indicator.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         indicator.translatesAutoresizingMaskIntoConstraints = false
         
         return indicator
