@@ -10,7 +10,7 @@ import XCTest
 
 class RickAndJamesTestUITests: XCTestCase {
 
-    func testExample() {
+    func testAppNavigation() {
         
         let app = XCUIApplication()
         app.launchArguments.append("MOCK")
