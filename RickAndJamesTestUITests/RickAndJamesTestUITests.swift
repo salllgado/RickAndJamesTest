@@ -10,26 +10,27 @@ import XCTest
 
 class RickAndJamesTestUITests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func testExample() {
+        
         let app = XCUIApplication()
+        app.launchArguments.append("MOCK")
         app.launch()
 
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        sleep(1)
+        app.tables.firstMatch.swipeUp()
+        app.tables.cells.containing(.staticText, identifier: "Alan Rails").element.tap()
+        XCTAssertTrue(app.navigationBars["Alan Rails"].exists)
+        
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        XCTAssertTrue(app.tables.firstMatch.exists)
+        
+        app.tables.firstMatch.swipeDown()
+        app.tables.cells.containing(.staticText, identifier: "Morty Smith").element.tap()
+        XCTAssertTrue(app.navigationBars["Morty Smith"].exists)
+        
+        XCTAssertTrue(app.staticTexts.containing(.staticText, identifier: "Alive - Human").element.exists)
+        XCTAssertTrue(app.staticTexts.containing(.staticText, identifier: "Last known location:").element.exists)
+        XCTAssertTrue(app.staticTexts.containing(.staticText, identifier: "Earth (Replacement Dimension)").element.exists)
     }
 
     func testLaunchPerformance() throws {

@@ -43,10 +43,7 @@ class ServiceProvider {
             return
         }
         
-        var urlRequest = URLRequest(url: componentURL)
-//        urlRequest.addValue(auth,
-//                            forHTTPHeaderField: "Authorization")
-        
+        let urlRequest = URLRequest(url: componentURL)
         let session = self.session.dataTask(request: urlRequest) { (data, response, error) in
             self.debugResponse(request: urlRequest, data: data)
             if let error = error {

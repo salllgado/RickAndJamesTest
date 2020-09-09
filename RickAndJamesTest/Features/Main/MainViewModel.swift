@@ -32,20 +32,24 @@ class MainViewModel: MainViewModable, TableViewPagination {
     var numberOfPages: Int = 1
     
     var delegate: MainViewControllerDelegate?
-    private lazy var service: MainService = MainService()
+    private var service: MainServiceProvider
+    
+    init(service: MainServiceProvider = MainService()) {
+        self.service = service
+    }
     
     func fetchData() {
-        service.getCharacteres(page: currentPage) { [ unowned self ] (result) in
+        service.getCharacteres(page: currentPage) { [ weak self ] (result) in
             switch result {
             case .success(let successResult):
                 debugPrint(successResult)
-                self.characteres = successResult.character
-                self.nextPage = (successResult.info.next != nil) && successResult.info.count > successResult.character.count ? true : false
-                self.shouldShowLoadingCell = successResult.character.count < successResult.info.count
-                self.numberOfPages = successResult.info.count
+                self?.characteres = successResult.character
+                self?.nextPage = (successResult.info.next != nil) && successResult.info.count > successResult.character.count ? true : false
+                self?.shouldShowLoadingCell = successResult.character.count < successResult.info.count
+                self?.numberOfPages = successResult.info.count
                 
                 DispatchQueue.main.async {
-                    self.delegate?.reloadUI()
+                    self?.delegate?.reloadUI()
                 }
             case .failure(let err):
                 debugPrint(err)

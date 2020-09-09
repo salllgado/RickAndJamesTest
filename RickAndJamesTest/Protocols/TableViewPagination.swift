@@ -27,6 +27,9 @@ public extension TableViewPagination {
     }
     
     func isLoadingIndexPath(_ indexPath: IndexPath, reach value: Int) -> Bool {
+        if ProcessInfo.processInfo.arguments.contains("MOCK") {
+            return false
+        }
         return shouldShowLoadingCell ? indexPath.row == value : false
     }
 }
