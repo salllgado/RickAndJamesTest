@@ -12,20 +12,22 @@ class AppCoordinator: Coordinator {
     
     let window: UIWindow
     
-    var startViewController: UIViewController
-    var presenter: UINavigationController
+    private (set) var presenter: UINavigationController?
+    private (set) var startViewController: UIViewController
     
     private var mainCoordinator: MainCoordinator?
     
     init(window: UIWindow) {
         self.window = window
-        presenter = UINavigationController()
+        
+        let _presenter = UINavigationController()
+        self.presenter = _presenter
         startViewController = UIViewController()
-        mainCoordinator = MainCoordinator(presenter: presenter)
+        mainCoordinator = MainCoordinator(presenter: _presenter)
     }
     
     func start() {
-        presenter.setNavigationTheme()
+        presenter?.setNavigationTheme()
         window.rootViewController = presenter
         mainCoordinator?.start()
         window.makeKeyAndVisible()

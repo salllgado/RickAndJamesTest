@@ -9,7 +9,7 @@
 import UIKit
 
 protocol Coordinator {
-    var presenter: UINavigationController { get set }
+    var presenter: UINavigationController? { get }
     var startViewController: UIViewController { get }
     
     func start()

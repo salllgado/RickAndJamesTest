@@ -10,8 +10,6 @@ import UIKit
 
 class MainViewControllerLayout: UIView {
     
-    private (set) var controller: TableViewProtocol
-    
     lazy private (set) var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -29,10 +27,11 @@ class MainViewControllerLayout: UIView {
         return refreshControl
     }()
     
-    init(viewController: TableViewProtocol) {
-        controller = viewController
+    init(delegateDataSouce: UITableViewDataSource & UITableViewDelegate) {
         super.init(frame: .zero)
         
+        tableView.delegate = delegateDataSouce
+        tableView.dataSource = delegateDataSouce
         initView()
     }
     
@@ -44,9 +43,6 @@ class MainViewControllerLayout: UIView {
     private func initView() {
         
         addSubview(tableView)
-        
-        tableView.delegate = controller
-        tableView.dataSource = controller
         
         tableView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         tableView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true

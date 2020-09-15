@@ -29,7 +29,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         title = "The rick and morty api"
         
-        let layout = MainViewControllerLayout(viewController: self)
+        let layout = MainViewControllerLayout(delegateDataSouce: self)
         layout.refreshControl.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
         
         UITableView.shouldShowLoadingCell = viewModel.shouldShowLoadingCell
