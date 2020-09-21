@@ -26,13 +26,25 @@ struct CharacterProvider: TimelineProvider {
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         let currentDate = Date()
         let refreshData = Calendar.current.date(byAdding: .minute, value: 1, to: currentDate)!
-        let service = MainService()
-        service.getCharacteres(page: 1) { (result) in
+        
+        let defaults = UserDefaults(suiteName: "group.rickAndJamesApp")
+        
+        guard let characterId = defaults?.value(forKey: "lastCharactedId") as? Int  else {
+            let character = CharacterResult(id: 1, name: "None", status: "None", species: "None", gender: "None", image: "None", location: CharacterLocationResult(name: "None"))
+            let entry = CharacterEntry(date: currentDate, character: character)
+            let timeline = Timeline(entries: [entry], policy: .after(refreshData))
+            completion(timeline)
+            
+            return
+        }
+        
+        let service = DetailService()
+        service.getCharacter(id: characterId) { (result) in
             let character: CharacterResult
             
             switch result {
-            case .success(let charactersResult):
-                character = charactersResult.character.first!
+            case .success(let characterResult):
+                character = characterResult
                 break
             case .failure(let error):
                 character = CharacterResult(id: 1, name: "None", status: "None", species: "None", gender: "None", image: "None", location: CharacterLocationResult(name: "None"))
@@ -43,6 +55,5 @@ struct CharacterProvider: TimelineProvider {
             let timeline = Timeline(entries: [entry], policy: .after(refreshData))
             completion(timeline)
         }
-        
     }
 }

@@ -45,7 +45,6 @@
 		B8CA58812516AF990025BD63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8CA58802516AF990025BD63 /* Assets.xcassets */; };
 		B8CA58852516AF990025BD63 /* RickAndJamesWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B8CA58772516AF970025BD63 /* RickAndJamesWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B8CA58942516AFB60025BD63 /* CharacterEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA588E2516AFB40025BD63 /* CharacterEntry.swift */; };
-		B8CA589D2516B00E0025BD63 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB2725067D9D008983D4 /* MainService.swift */; };
 		B8CA58A22516B3070025BD63 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB1625067783008983D4 /* NetworkError.swift */; };
 		B8CA58A82516B4B20025BD63 /* CharacterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA58A72516B4B10025BD63 /* CharacterProvider.swift */; };
 		B8CA58AD2516B5600025BD63 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB1C250677E5008983D4 /* ServiceProvider.swift */; };
@@ -56,6 +55,14 @@
 		B8CA58C62516B5850025BD63 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB2025067BCB008983D4 /* Keys.swift */; };
 		B8CA58CB2516B5920025BD63 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB142506776B008983D4 /* URLSessionProtocol.swift */; };
 		B8CA58D02516B5980025BD63 /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB1225067757008983D4 /* URLSessionDataTaskProtocol.swift */; };
+		B8CA590F2518D87F0025BD63 /* DetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA590E2518D87F0025BD63 /* DetailService.swift */; };
+		B8CA59102518D87F0025BD63 /* DetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA590E2518D87F0025BD63 /* DetailService.swift */; };
+		B8CA591C2518D9330025BD63 /* InfoResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA591B2518D9330025BD63 /* InfoResult.swift */; };
+		B8CA59272518D9750025BD63 /* CharacterResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA59262518D9750025BD63 /* CharacterResult.swift */; };
+		B8CA59282518D9750025BD63 /* CharacterResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA59262518D9750025BD63 /* CharacterResult.swift */; };
+		B8CA592E2518D9AE0025BD63 /* CharacteresResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA592D2518D9AE0025BD63 /* CharacteresResult.swift */; };
+		B8CA59332518DAA20025BD63 /* CharacteresResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA592D2518D9AE0025BD63 /* CharacteresResult.swift */; };
+		B8CA59382518DAAF0025BD63 /* InfoResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA591B2518D9330025BD63 /* InfoResult.swift */; };
 		B8E061FE2503A82F00AC969F /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E061FD2503A82F00AC969F /* MainTableViewCell.swift */; };
 		B8E062002503AA8700AC969F /* NavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E061FF2503AA8700AC969F /* NavigationControllerExtension.swift */; };
 		B8F51CD124FE8AB20093F1D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F51CD024FE8AB20093F1D6 /* AppDelegate.swift */; };
@@ -141,6 +148,12 @@
 		B8CA58822516AF990025BD63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8CA588E2516AFB40025BD63 /* CharacterEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEntry.swift; sourceTree = "<group>"; };
 		B8CA58A72516B4B10025BD63 /* CharacterProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterProvider.swift; sourceTree = "<group>"; };
+		B8CA58F02518D3CE0025BD63 /* RickAndJamesTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RickAndJamesTest.entitlements; sourceTree = "<group>"; };
+		B8CA59012518D6B70025BD63 /* RickAndJamesWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RickAndJamesWidgetExtension.entitlements; sourceTree = "<group>"; };
+		B8CA590E2518D87F0025BD63 /* DetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailService.swift; sourceTree = "<group>"; };
+		B8CA591B2518D9330025BD63 /* InfoResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoResult.swift; sourceTree = "<group>"; };
+		B8CA59262518D9750025BD63 /* CharacterResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterResult.swift; sourceTree = "<group>"; };
+		B8CA592D2518D9AE0025BD63 /* CharacteresResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteresResult.swift; sourceTree = "<group>"; };
 		B8E061FD2503A82F00AC969F /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		B8E061FF2503AA8700AC969F /* NavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtension.swift; sourceTree = "<group>"; };
 		B8F51CCD24FE8AB20093F1D6 /* RickAndJamesTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndJamesTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -260,6 +273,7 @@
 		B5FADB0E250676FC008983D4 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				B5FADB2425067D6F008983D4 /* API */,
 				B5AA0E952508F51600A6660C /* Mocks */,
 				B5FADB1E2506782B008983D4 /* Extensions */,
 				B5FADB0F25067711008983D4 /* Protocol */,
@@ -294,6 +308,7 @@
 			children = (
 				B5FADB2525067D84008983D4 /* CharacteresAPI.swift */,
 				B5FADB2725067D9D008983D4 /* MainService.swift */,
+				B8CA590E2518D87F0025BD63 /* DetailService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -312,7 +327,6 @@
 		B88E84782503A6AC00CA0C88 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				B5FADB2425067D6F008983D4 /* API */,
 				B8F51CD424FE8AB20093F1D6 /* MainViewController.swift */,
 				B88E84792503A6BA00CA0C88 /* MainViewControllerLayout.swift */,
 				B88E84742503A4E200CA0C88 /* MainViewModel.swift */,
@@ -342,9 +356,20 @@
 			path = RickAndJamesWidget;
 			sourceTree = "<group>";
 		};
+		B8CA591A2518D9190025BD63 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B8CA591B2518D9330025BD63 /* InfoResult.swift */,
+				B8CA59262518D9750025BD63 /* CharacterResult.swift */,
+				B8CA592D2518D9AE0025BD63 /* CharacteresResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		B8F51CC424FE8AB20093F1D6 = {
 			isa = PBXGroup;
 			children = (
+				B8CA59012518D6B70025BD63 /* RickAndJamesWidgetExtension.entitlements */,
 				B8F51CCF24FE8AB20093F1D6 /* RickAndJamesTest */,
 				B8F51CE624FE8AB70093F1D6 /* RickAndJamesTestTests */,
 				B8F51CF124FE8AB70093F1D6 /* RickAndJamesTestUITests */,
@@ -372,10 +397,12 @@
 				B51D316A250415BE00F3F9D4 /* Coordinators */,
 				B51D3165250410A300F3F9D4 /* Extensions */,
 				B51D31632504106700F3F9D4 /* Features */,
+				B8CA591A2518D9190025BD63 /* Models */,
 				B5FADB0E250676FC008983D4 /* Network */,
 				B5FADB2D2506C915008983D4 /* Resources */,
 				B51D316025040D9E00F3F9D4 /* Protocols */,
 				B8F51CDE24FE8AB60093F1D6 /* Info.plist */,
+				B8CA58F02518D3CE0025BD63 /* RickAndJamesTest.entitlements */,
 			);
 			path = RickAndJamesTest;
 			sourceTree = "<group>";
@@ -572,19 +599,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8CA59282518D9750025BD63 /* CharacterResult.swift in Sources */,
 				B8CA58CB2516B5920025BD63 /* URLSessionProtocol.swift in Sources */,
 				B8CA58AD2516B5600025BD63 /* ServiceProvider.swift in Sources */,
 				B8CA58942516AFB60025BD63 /* CharacterEntry.swift in Sources */,
+				B8CA59332518DAA20025BD63 /* CharacteresResult.swift in Sources */,
 				B8CA58A22516B3070025BD63 /* NetworkError.swift in Sources */,
+				B8CA59382518DAAF0025BD63 /* InfoResult.swift in Sources */,
 				B8CA58BC2516B5780025BD63 /* ServiceTargetProtocol.swift in Sources */,
 				B8CA58C62516B5850025BD63 /* Keys.swift in Sources */,
 				B8CA587F2516AF970025BD63 /* RickAndJamesWidget.swift in Sources */,
 				B8CA58A82516B4B20025BD63 /* CharacterProvider.swift in Sources */,
+				B8CA59102518D87F0025BD63 /* DetailService.swift in Sources */,
 				B8CA58B22516B5670025BD63 /* Mockable.swift in Sources */,
 				B8CA58D02516B5980025BD63 /* URLSessionDataTaskProtocol.swift in Sources */,
 				B8CA58B72516B56D0025BD63 /* CharacteresAPI.swift in Sources */,
 				B8CA58C12516B5800025BD63 /* AppConfigurations.swift in Sources */,
-				B8CA589D2516B00E0025BD63 /* MainService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +622,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8CA590F2518D87F0025BD63 /* DetailService.swift in Sources */,
+				B8CA592E2518D9AE0025BD63 /* CharacteresResult.swift in Sources */,
 				B5FADB2C2506854B008983D4 /* UIImageViewExtension.swift in Sources */,
 				B5FADB2325067C54008983D4 /* AppConfigurations.swift in Sources */,
 				B5FADB1725067783008983D4 /* NetworkError.swift in Sources */,
@@ -611,6 +643,7 @@
 				B8F51CD124FE8AB20093F1D6 /* AppDelegate.swift in Sources */,
 				B88E84752503A4E200CA0C88 /* MainViewModel.swift in Sources */,
 				B530B0AD250817220031EB41 /* TableViewPagination.swift in Sources */,
+				B8CA591C2518D9330025BD63 /* InfoResult.swift in Sources */,
 				B88E84772503A5CF00CA0C88 /* DetailViewController.swift in Sources */,
 				B5FADB152506776B008983D4 /* URLSessionProtocol.swift in Sources */,
 				B5FADB1B250677BE008983D4 /* URLSessionDataTask+URLSessionDataTaskProtocol.swift in Sources */,
@@ -618,6 +651,7 @@
 				B5FADB2F2506C935008983D4 /* Colors.swift in Sources */,
 				B5FADB312506EE3D008983D4 /* UITableViewExtensions.swift in Sources */,
 				B51D31692504117A00F3F9D4 /* DetailViewModel.swift in Sources */,
+				B8CA59272518D9750025BD63 /* CharacterResult.swift in Sources */,
 				B5FADB2625067D84008983D4 /* CharacteresAPI.swift in Sources */,
 				B51D316225040DB300F3F9D4 /* Coordinator.swift in Sources */,
 				B5FADB1325067757008983D4 /* URLSessionDataTaskProtocol.swift in Sources */,
@@ -679,7 +713,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = RickAndJamesWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT3YCTX6YE;
 				INFOPLIST_FILE = RickAndJamesWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -701,7 +737,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = RickAndJamesWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT3YCTX6YE;
 				INFOPLIST_FILE = RickAndJamesWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -836,7 +874,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RickAndJamesTest/RickAndJamesTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT3YCTX6YE;
 				INFOPLIST_FILE = RickAndJamesTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -856,7 +896,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RickAndJamesTest/RickAndJamesTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT3YCTX6YE;
 				INFOPLIST_FILE = RickAndJamesTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (

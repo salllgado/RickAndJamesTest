@@ -10,6 +10,7 @@ import Foundation
 
 enum CharacteresAPI {
     case list(page: Int)
+    case character(id: Int)
 }
 
 extension CharacteresAPI: ServiceTargetProtocol {
@@ -20,8 +21,10 @@ extension CharacteresAPI: ServiceTargetProtocol {
     
     var path: String {
         switch self {
-        case .list:
+        case .list(_):
             return "/api/character"
+        case .character(let id):
+        return "/api/character/\(id)"
         }
     }
     
@@ -31,8 +34,10 @@ extension CharacteresAPI: ServiceTargetProtocol {
     
     var parameters: [String : String] {
         switch self {
-        case.list(let page):
+        case .list(let page):
             return ["page": String(page)]
+        default:
+            return [:]
         }
     }
 }
