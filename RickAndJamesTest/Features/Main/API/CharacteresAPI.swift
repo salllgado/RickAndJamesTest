@@ -15,7 +15,7 @@ enum CharacteresAPI {
 extension CharacteresAPI: ServiceTargetProtocol {
     
     var baseURL: URL? {
-        return URL(string: AppConfigurations.Server.url)
+        return URL(string: "https://rickandmortyapi.com")
     }
     
     var path: String {
