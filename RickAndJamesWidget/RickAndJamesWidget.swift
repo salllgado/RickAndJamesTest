@@ -17,8 +17,11 @@ struct RickAndJamesWidgetEntryView : View {
     }
 
     var body: some View {
-        ZStack {
-            VStack {
+        ZStack(alignment: Alignment(horizontal: .leading, vertical: .center), content: {
+            Image("WidgetBackground")
+                .resizable()
+            VStack(alignment: .leading, spacing: 0, content: {
+                Spacer()
                 Text(entry.character.name)
                     .bold()
                     .foregroundColor(.white)
@@ -26,8 +29,9 @@ struct RickAndJamesWidgetEntryView : View {
                 Text(entry.character.status)
                     .foregroundColor(.white)
                     .padding(EdgeInsets(top: 4, leading: 0, bottom: 0, trailing: 0))
-            }
-        }
+            })
+            .padding(8)
+        })
         .background(LinearGradient(gradient: Gradient(colors: [.gray, .black]), startPoint: .leading, endPoint: .trailing))
         .cornerRadius(8)
     }
