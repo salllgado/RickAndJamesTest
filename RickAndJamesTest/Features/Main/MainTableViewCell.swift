@@ -44,7 +44,7 @@ class MainTableViewCell: UITableViewCell {
         
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.cacheImage(urlString: character.image)
+        imageView.cacheImage(urlString: character.image, defaultImage: Images.defaultAvatar.image)
         
         photoView.addSubview(imageView)
         

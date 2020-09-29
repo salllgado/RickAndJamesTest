@@ -18,7 +18,7 @@ struct RickAndJamesWidgetEntryView : View {
 
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .leading, vertical: .center), content: {
-            Image("WidgetBackground")
+            Image(uiImage: getImage())
                 .resizable()
             VStack(alignment: .leading, spacing: 0, content: {
                 Spacer()
@@ -26,14 +26,27 @@ struct RickAndJamesWidgetEntryView : View {
                     .bold()
                     .foregroundColor(.white)
                     .padding(EdgeInsets(top: 4, leading: 0, bottom: 0, trailing: 0))
-                Text(entry.character.status)
-                    .foregroundColor(.white)
-                    .padding(EdgeInsets(top: 4, leading: 0, bottom: 0, trailing: 0))
+                HStack {
+                    Text(entry.character.status)
+                        .foregroundColor(.white)
+                        .padding(EdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0))
+                    Spacer()
+                }
             })
+            .background(Color.black.opacity(0.2))
+            .cornerRadius(8)
+            .frame(width: .infinity, height: 0, alignment: .topLeading)
             .padding(8)
         })
         .background(LinearGradient(gradient: Gradient(colors: [.gray, .black]), startPoint: .leading, endPoint: .trailing))
         .cornerRadius(8)
+    }
+    
+    func getImage() -> UIImage {
+        let imageView = UIImageView()
+        imageView.cacheImage(urlString: entry.character.image, defaultImage: UIImage(named: "WidgetBackground")!)
+        
+        return imageView.image!
     }
 }
 
