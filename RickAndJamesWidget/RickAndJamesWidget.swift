@@ -25,11 +25,11 @@ struct RickAndJamesWidgetEntryView : View {
                 Text(entry.character.name)
                     .bold()
                     .foregroundColor(.white)
-                    .padding(EdgeInsets(top: 4, leading: 0, bottom: 0, trailing: 0))
+                    .padding(EdgeInsets(top: 4, leading: 4, bottom: 0, trailing: 4))
                 HStack {
                     Text(entry.character.status)
                         .foregroundColor(.white)
-                        .padding(EdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0))
+                        .padding(EdgeInsets(top: 4, leading: 4, bottom: 4, trailing: 4))
                     Spacer()
                 }
             })

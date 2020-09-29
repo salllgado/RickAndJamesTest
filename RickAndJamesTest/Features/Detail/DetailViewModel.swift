@@ -14,6 +14,7 @@ protocol DetailViewModable: class {
     var delegate: DetailViewControllerDelegate? { get set }
     
     func fetchData()
+    func reloadWidgetIfNeeded()
 }
 
 protocol DetailViewControllerDelegate: class {
@@ -37,6 +38,10 @@ class DetailViewModel: DetailViewModable {
         
         print("Value saved")
         
+        reloadWidgetIfNeeded()
+    }
+    
+    func reloadWidgetIfNeeded() {
         if #available(iOS 14.0, *) {
             WidgetCenter.shared.reloadAllTimelines()
         }
