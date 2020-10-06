@@ -161,7 +161,7 @@ class DetailViewControllerView: UIView {
     }
     
     func setImage(character: CharacterResult) {
-        imageView.cacheImage(urlString: character.image)
+        imageView.cacheImage(urlString: character.image, defaultImage: Images.defaultAvatar.image)
         characterNameLabel.text = character.name
         statusView.backgroundColor = character.status == "Alive" ? .green : .gray
         statusDescriptionLabel.text = "\(character.status ) - \(character.species)"

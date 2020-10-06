@@ -28,6 +28,11 @@ class DetailViewController: UIViewController {
         view = DetailViewControllerView(viewController: self)
         viewModel.fetchData()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.reloadWidgetIfNeeded()
+    }
 }
 
 extension DetailViewController: DetailViewControllerDelegate {

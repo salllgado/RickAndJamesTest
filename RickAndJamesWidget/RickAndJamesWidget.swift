@@ -17,19 +17,39 @@ struct RickAndJamesWidgetEntryView : View {
     }
 
     var body: some View {
-        ZStack {
-            VStack {
+        ZStack(alignment: Alignment(horizontal: .leading, vertical: .center), content: {
+            Image(uiImage: getImage())
+                .resizable()
+            VStack(alignment: .leading, spacing: 0, content: {
+                Spacer()
                 Text(entry.character.name)
                     .bold()
                     .foregroundColor(.white)
-                    .padding(EdgeInsets(top: 4, leading: 0, bottom: 0, trailing: 0))
-                Text(entry.character.status)
-                    .foregroundColor(.white)
-                    .padding(EdgeInsets(top: 4, leading: 0, bottom: 0, trailing: 0))
-            }
-        }
+                    .padding(EdgeInsets(top: 4, leading: 4, bottom: 0, trailing: 4))
+                HStack {
+                    Circle()
+                        .frame(width: 10, height: 10, alignment: .center)
+                        .foregroundColor(entry.character.status == "Alive" ? Color.green : Color.gray)
+                        .padding(EdgeInsets(top: 0, leading: 4, bottom: 0, trailing: 0))
+                    Text("\(entry.character.status) - \(entry.character.species)")
+                        .foregroundColor(.white)
+                        .padding(EdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 4))
+                    Spacer()
+                }
+            })
+            .padding(6)
+            .background(Color.black.opacity(0.2))
+            .cornerRadius(8)
+        })
         .background(LinearGradient(gradient: Gradient(colors: [.gray, .black]), startPoint: .leading, endPoint: .trailing))
         .cornerRadius(8)
+    }
+    
+    func getImage() -> UIImage {
+        let imageView = UIImageView()
+        imageView.cacheImage(urlString: entry.character.image, defaultImage: UIImage(named: "WidgetBackground")!)
+        
+        return imageView.image!
     }
 }
 

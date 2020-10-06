@@ -12,9 +12,9 @@ let imageCache = NSCache<AnyObject, AnyObject>()
 
 extension UIImageView {
     
-    func cacheImage(urlString: String) {
+    func cacheImage(urlString: String, defaultImage: UIImage) {
         let url = URL(string: urlString)
-        image = nil
+        image = defaultImage
         
         if let imageFromCache = imageCache.object(forKey: urlString as AnyObject) as? UIImage {
             self.setImage(fade: true, image: imageFromCache)

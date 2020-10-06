@@ -39,6 +39,8 @@
 		B88E84752503A4E200CA0C88 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E84742503A4E200CA0C88 /* MainViewModel.swift */; };
 		B88E84772503A5CF00CA0C88 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E84762503A5CF00CA0C88 /* DetailViewController.swift */; };
 		B88E847A2503A6BA00CA0C88 /* MainViewControllerLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E84792503A6BA00CA0C88 /* MainViewControllerLayout.swift */; };
+		B8A4215925237B8C00C5B7E6 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB2B2506854B008983D4 /* UIImageViewExtension.swift */; };
+		B8A4215F25237C3900C5B7E6 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A4215E25237C3900C5B7E6 /* Image.swift */; };
 		B8CA587A2516AF970025BD63 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8CA58792516AF970025BD63 /* WidgetKit.framework */; };
 		B8CA587C2516AF970025BD63 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8CA587B2516AF970025BD63 /* SwiftUI.framework */; };
 		B8CA587F2516AF970025BD63 /* RickAndJamesWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA587E2516AF970025BD63 /* RickAndJamesWidget.swift */; };
@@ -140,6 +142,7 @@
 		B88E84742503A4E200CA0C88 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		B88E84762503A5CF00CA0C88 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B88E84792503A6BA00CA0C88 /* MainViewControllerLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerLayout.swift; sourceTree = "<group>"; };
+		B8A4215E25237C3900C5B7E6 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		B8CA58772516AF970025BD63 /* RickAndJamesWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RickAndJamesWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8CA58792516AF970025BD63 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		B8CA587B2516AF970025BD63 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -320,6 +323,7 @@
 				B8F51CDB24FE8AB60093F1D6 /* LaunchScreen.storyboard */,
 				B5FADB2E2506C935008983D4 /* Colors.swift */,
 				B530B0AA250817000031EB41 /* LoadingTableViewCell.swift */,
+				B8A4215E25237C3900C5B7E6 /* Image.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -333,6 +337,13 @@
 				B8E061FD2503A82F00AC969F /* MainTableViewCell.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		B8A421492523772400C5B7E6 /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Persistance;
 			sourceTree = "<group>";
 		};
 		B8CA58782516AF970025BD63 /* Frameworks */ = {
@@ -393,6 +404,7 @@
 		B8F51CCF24FE8AB20093F1D6 /* RickAndJamesTest */ = {
 			isa = PBXGroup;
 			children = (
+				B8A421492523772400C5B7E6 /* Persistance */,
 				B51D315D25040D6200F3F9D4 /* App */,
 				B51D316A250415BE00F3F9D4 /* Coordinators */,
 				B51D3165250410A300F3F9D4 /* Extensions */,
@@ -612,6 +624,7 @@
 				B8CA58A82516B4B20025BD63 /* CharacterProvider.swift in Sources */,
 				B8CA59102518D87F0025BD63 /* DetailService.swift in Sources */,
 				B8CA58B22516B5670025BD63 /* Mockable.swift in Sources */,
+				B8A4215925237B8C00C5B7E6 /* UIImageViewExtension.swift in Sources */,
 				B8CA58D02516B5980025BD63 /* URLSessionDataTaskProtocol.swift in Sources */,
 				B8CA58B72516B56D0025BD63 /* CharacteresAPI.swift in Sources */,
 				B8CA58C12516B5800025BD63 /* AppConfigurations.swift in Sources */,
@@ -633,6 +646,7 @@
 				B88E847A2503A6BA00CA0C88 /* MainViewControllerLayout.swift in Sources */,
 				B5AA0E942508F4B600A6660C /* Mockable.swift in Sources */,
 				B5FADB2125067BCB008983D4 /* Keys.swift in Sources */,
+				B8A4215F25237C3900C5B7E6 /* Image.swift in Sources */,
 				B8F51CD524FE8AB20093F1D6 /* MainViewController.swift in Sources */,
 				B51D3167250410BE00F3F9D4 /* MainCoordinator.swift in Sources */,
 				B5FADB19250677A2008983D4 /* URLSession+URLSessionProtocol.swift in Sources */,
@@ -918,7 +932,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT3YCTX6YE;
 				INFOPLIST_FILE = RickAndJamesTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -928,6 +945,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.salgados.RickAndJamesTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RickAndJamesTest.app/RickAndJamesTest";
@@ -939,7 +958,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT3YCTX6YE;
 				INFOPLIST_FILE = RickAndJamesTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -949,6 +971,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.salgados.RickAndJamesTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RickAndJamesTest.app/RickAndJamesTest";
@@ -960,6 +984,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT3YCTX6YE;
 				INFOPLIST_FILE = RickAndJamesTestUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -979,6 +1004,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT3YCTX6YE;
 				INFOPLIST_FILE = RickAndJamesTestUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
