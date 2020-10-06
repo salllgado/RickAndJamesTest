@@ -1,3 +1,8 @@
+## DOCUMENTATION
+## - https://medium.com/@MaverickHitesh/setting-up-travis-ci-for-ios-project-b3cb7963b420   
+## - https://medium.com/@canyouimaginei/travis-ci-for-ios-6c0382a371f5
+## - https://docs.travis-ci.com/user/caching/
+
 os: osx
 osx_image: xcode12
 language: swift
