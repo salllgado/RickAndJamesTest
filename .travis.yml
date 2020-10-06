@@ -1,4 +1,4 @@
 os: osx
 osx_image: xcode11.7
 language: swift
-script: xcodebuild clean build test -project RickAndJamesTest/RickAndJamesTest.xcodeproj -scheme RickAndJamesTest -sdk iphonesimulator -destination “platform=iOS Simulator,OS=14.0,name=iPhone 8” ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
+script: xcodebuild clean build test -project RickAndJamesTest/RickAndJamesTest.xcodeproj -scheme RickAndJamesTest -sdk iphonesimulator -destination “platform=iOS Simulator,OS=14.0,name=iPhone” ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
