@@ -6,7 +6,11 @@
 os: osx
 osx_image: xcode12
 language: swift
+
+install:
+  - gem install xcpretty
+
 script:
-  - xcodebuild test -project RickAndJamesTest.xcodeproj -scheme RickAndJamesTest -destination 'platform=iOS Simulator,name=iPhone 8,OS=14.0'
+  - xcodebuild test -project RickAndJamesTest.xcodeproj -scheme RickAndJamesTest -destination 'platform=iOS Simulator,name=iPhone 8,OS=14.0' -enableCodeCoverage YES | xcpretty -c
 after_success:
   - bash <(curl -s https://codecov.io/bash) -t '49057336-c26c-4188-ae64-7f6cadaa9365'
