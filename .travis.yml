@@ -8,3 +8,5 @@ osx_image: xcode12
 language: swift
 script:
   - xcodebuild test -project RickAndJamesTest.xcodeproj -scheme RickAndJamesTest -destination 'platform=iOS Simulator,name=iPhone 8,OS=14.0'
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
