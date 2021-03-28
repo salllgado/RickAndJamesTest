@@ -11,9 +11,10 @@ import UIKit
 class MainViewController: UIViewController {
     
     private var viewModel: (MainViewModable & TableViewPagination) = MainViewModel()
-    private var navigationDelegate: MainNavigationDelegate?
-    
-    private var loadingView: UIActivityIndicatorView?
+    private let navigationDelegate: MainNavigationDelegate?
+    private lazy var loadingView: UIActivityIndicatorView = {
+        self.setLoadingView()
+    }()
     
     init(viewModel: (MainViewModable & TableViewPagination) = MainViewModel(), navigationDelegate: MainNavigationDelegate?) {
         self.viewModel = viewModel
@@ -29,16 +30,19 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         title = "The rick and morty api"
         
-        let layout = MainViewControllerLayout(viewController: self)
-        layout.refreshControl.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
-        
+        let layout = MainViewControllerLayout(
+            viewController: self,
+            actions: .init(actionRefreshData: actionRefreshData))
+
         UITableView.shouldShowLoadingCell = viewModel.shouldShowLoadingCell
         view = layout
         
-        loadingView = self.setLoadingView()
-        loadingView?.startAnimating()
-        
+        loadingView.startAnimating()
         viewModel.fetchData()
+    }
+    
+    func actionRefreshData() {
+        self.viewModel.refreshData()
     }
     
     @objc private func refreshData(_ refreshControl: UIRefreshControl) {
@@ -49,12 +53,13 @@ class MainViewController: UIViewController {
 extension MainViewController: MainViewControllerDelegate {
     
     func reloadUI() {
-        let layout = self.view as? MainViewControllerLayout
-        layout?.tableView.reloadData()
-        
-        if layout?.refreshControl.isRefreshing ?? false { layout?.refreshControl.endRefreshing() }
-        
-        self.loadingView?.stopAnimating()
+        guard let layout = self.view as? MainViewControllerLayoutProtocol else { return }
+        layout.reloadData()
+        loadingView.stopAnimating()
+    }
+    
+    func navigateToDetail(_ character: CharacterResult) {
+        navigationDelegate?.navigateToDetail(character: character)
     }
 }
 
@@ -88,6 +93,6 @@ extension MainViewController {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        navigationDelegate?.navigateToDetail(character: viewModel.characteres[indexPath.row])
+        navigateToDetail(viewModel.characteres[indexPath.row])
     }
 }

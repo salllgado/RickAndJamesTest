@@ -82,5 +82,4 @@ class MainViewModel: MainViewModable, TableViewPagination {
             }
         }
     }
-    
 }

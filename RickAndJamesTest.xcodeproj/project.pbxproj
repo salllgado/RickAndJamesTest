@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		039C3B512610A32600723279 /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039C3B502610A32600723279 /* MainViewControllerTests.swift */; };
 		B51D315F25040D8100F3F9D4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51D315E25040D8100F3F9D4 /* AppCoordinator.swift */; };
 		B51D316225040DB300F3F9D4 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51D316125040DB300F3F9D4 /* Coordinator.swift */; };
 		B51D3167250410BE00F3F9D4 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51D3166250410BE00F3F9D4 /* MainCoordinator.swift */; };
@@ -67,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		039C3B502610A32600723279 /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
 		B51D315E25040D8100F3F9D4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B51D316125040DB300F3F9D4 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B51D3166250410BE00F3F9D4 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -136,6 +138,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		039C3B4D2610A2DB00723279 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				039C3B4E2610A2E400723279 /* Main */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		039C3B4E2610A2E400723279 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B8F51CE724FE8AB70093F1D6 /* MainViewModelTests.swift */,
+				039C3B502610A32600723279 /* MainViewControllerTests.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		039C3B4F2610A2EA00723279 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B5AA0E912508F3C400A6660C /* ParseCharacterData.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		B51D315D25040D6200F3F9D4 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,9 +331,9 @@
 		B8F51CE624FE8AB70093F1D6 /* RickAndJamesTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				B8F51CE724FE8AB70093F1D6 /* MainViewModelTests.swift */,
+				039C3B4D2610A2DB00723279 /* Features */,
+				039C3B4F2610A2EA00723279 /* Network */,
 				B8F51CE924FE8AB70093F1D6 /* Info.plist */,
-				B5AA0E912508F3C400A6660C /* ParseCharacterData.swift */,
 			);
 			path = RickAndJamesTestTests;
 			sourceTree = "<group>";
@@ -494,6 +521,7 @@
 			files = (
 				B8F51CE824FE8AB70093F1D6 /* MainViewModelTests.swift in Sources */,
 				B5AA0E922508F3C400A6660C /* ParseCharacterData.swift in Sources */,
+				039C3B512610A32600723279 /* MainViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

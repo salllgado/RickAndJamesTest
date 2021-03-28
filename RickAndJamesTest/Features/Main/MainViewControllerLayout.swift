@@ -8,11 +8,20 @@
 
 import UIKit
 
-class MainViewControllerLayout: UIView {
+protocol MainViewControllerLayoutProtocol {
+    func reloadData()
+}
+
+class MainViewControllerLayout: UIView, MainViewControllerLayoutProtocol {
     
-    private (set) var controller: TableViewProtocol
+    struct Actions {
+        let actionRefreshData: ()->Void
+    }
     
-    lazy private (set) var tableView: UITableView = {
+    private var controller: TableViewProtocol
+    private let actions: Actions
+    
+    private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorColor = .clear
@@ -22,37 +31,59 @@ class MainViewControllerLayout: UIView {
         return tableView
     }()
     
-    lazy private (set) var refreshControl: UIRefreshControl = {
+    private lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.tintColor = .white
         
         return refreshControl
     }()
     
-    init(viewController: TableViewProtocol) {
+    init(
+        viewController: TableViewProtocol,
+        actions: Actions
+    ) {
         controller = viewController
+        self.actions = actions
         super.init(frame: .zero)
         
-        initView()
+        addSubviews()
+        constrainViews()
+        aditionalConfigurations()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Public API
+    func reloadData() {
+        tableView.reloadData()
+        
+        if refreshControl.isRefreshing {
+            refreshControl.endRefreshing()
+        }
+    }
     
-    private func initView() {
-        
+    private func addSubviews() {
         addSubview(tableView)
-        
-        tableView.delegate = controller
-        tableView.dataSource = controller
-        
+        tableView.addSubview(refreshControl)
+    }
+    
+    private func constrainViews() {
         tableView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         tableView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+    }
+    
+    private func aditionalConfigurations() {
+        tableView.delegate = controller
+        tableView.dataSource = controller
         
-        tableView.addSubview(refreshControl)
+        refreshControl.addTarget(self, action: #selector(actionRefresh), for: .valueChanged)
+    }
+    
+    @objc private func actionRefresh() {
+        actions.actionRefreshData()
     }
 }
