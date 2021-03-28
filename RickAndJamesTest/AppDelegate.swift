@@ -8,8 +8,6 @@
 
 import UIKit
 
-typealias TableViewProtocol = UITableViewDataSource & UITableViewDelegate
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     

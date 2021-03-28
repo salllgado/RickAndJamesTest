@@ -10,18 +10,21 @@ import Foundation
 
 enum CharacteresAPI {
     case list(page: Int)
+    case character(id: Int)
 }
 
 extension CharacteresAPI: ServiceTargetProtocol {
     
     var baseURL: URL? {
-        return URL(string: AppConfigurations.Server.url)
+        return URL(string: "https://rickandmortyapi.com")
     }
     
     var path: String {
         switch self {
-        case .list:
+        case .list(_):
             return "/api/character"
+        case .character(let id):
+        return "/api/character/\(id)"
         }
     }
     
@@ -31,8 +34,10 @@ extension CharacteresAPI: ServiceTargetProtocol {
     
     var parameters: [String : String] {
         switch self {
-        case.list(let page):
+        case .list(let page):
             return ["page": String(page)]
+        default:
+            return [:]
         }
     }
 }

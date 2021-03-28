@@ -7,12 +7,14 @@
 //
 
 import Foundation
+import WidgetKit
 
 protocol DetailViewModable: class {
     var character: CharacterResult { get }
     var delegate: DetailViewControllerDelegate? { get set }
     
     func fetchData()
+    func reloadWidgetIfNeeded()
 }
 
 protocol DetailViewControllerDelegate: class {
@@ -30,5 +32,18 @@ class DetailViewModel: DetailViewModable {
     
     func fetchData() {
         delegate?.reloadUI()
+        
+        let defaults = UserDefaults(suiteName: "group.rickAndJamesApp")
+        defaults?.setValue(character.id, forKey: "lastCharactedId")
+        
+        print("Value saved")
+        
+        reloadWidgetIfNeeded()
+    }
+    
+    func reloadWidgetIfNeeded() {
+        if #available(iOS 14.0, *) {
+            WidgetCenter.shared.reloadAllTimelines()
+        }
     }
 }

@@ -40,6 +40,32 @@
 		B88E84752503A4E200CA0C88 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E84742503A4E200CA0C88 /* MainViewModel.swift */; };
 		B88E84772503A5CF00CA0C88 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E84762503A5CF00CA0C88 /* DetailViewController.swift */; };
 		B88E847A2503A6BA00CA0C88 /* MainViewControllerLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E84792503A6BA00CA0C88 /* MainViewControllerLayout.swift */; };
+		B8A4215925237B8C00C5B7E6 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB2B2506854B008983D4 /* UIImageViewExtension.swift */; };
+		B8A4215F25237C3900C5B7E6 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A4215E25237C3900C5B7E6 /* Image.swift */; };
+		B8CA587A2516AF970025BD63 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8CA58792516AF970025BD63 /* WidgetKit.framework */; };
+		B8CA587C2516AF970025BD63 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8CA587B2516AF970025BD63 /* SwiftUI.framework */; };
+		B8CA587F2516AF970025BD63 /* RickAndJamesWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA587E2516AF970025BD63 /* RickAndJamesWidget.swift */; };
+		B8CA58812516AF990025BD63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8CA58802516AF990025BD63 /* Assets.xcassets */; };
+		B8CA58852516AF990025BD63 /* RickAndJamesWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B8CA58772516AF970025BD63 /* RickAndJamesWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B8CA58942516AFB60025BD63 /* CharacterEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA588E2516AFB40025BD63 /* CharacterEntry.swift */; };
+		B8CA58A22516B3070025BD63 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB1625067783008983D4 /* NetworkError.swift */; };
+		B8CA58A82516B4B20025BD63 /* CharacterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA58A72516B4B10025BD63 /* CharacterProvider.swift */; };
+		B8CA58AD2516B5600025BD63 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB1C250677E5008983D4 /* ServiceProvider.swift */; };
+		B8CA58B22516B5670025BD63 /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AA0E932508F4B600A6660C /* Mockable.swift */; };
+		B8CA58B72516B56D0025BD63 /* CharacteresAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB2525067D84008983D4 /* CharacteresAPI.swift */; };
+		B8CA58BC2516B5780025BD63 /* ServiceTargetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB1025067731008983D4 /* ServiceTargetProtocol.swift */; };
+		B8CA58C12516B5800025BD63 /* AppConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB2225067C54008983D4 /* AppConfigurations.swift */; };
+		B8CA58C62516B5850025BD63 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB2025067BCB008983D4 /* Keys.swift */; };
+		B8CA58CB2516B5920025BD63 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB142506776B008983D4 /* URLSessionProtocol.swift */; };
+		B8CA58D02516B5980025BD63 /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB1225067757008983D4 /* URLSessionDataTaskProtocol.swift */; };
+		B8CA590F2518D87F0025BD63 /* DetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA590E2518D87F0025BD63 /* DetailService.swift */; };
+		B8CA59102518D87F0025BD63 /* DetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA590E2518D87F0025BD63 /* DetailService.swift */; };
+		B8CA591C2518D9330025BD63 /* InfoResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA591B2518D9330025BD63 /* InfoResult.swift */; };
+		B8CA59272518D9750025BD63 /* CharacterResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA59262518D9750025BD63 /* CharacterResult.swift */; };
+		B8CA59282518D9750025BD63 /* CharacterResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA59262518D9750025BD63 /* CharacterResult.swift */; };
+		B8CA592E2518D9AE0025BD63 /* CharacteresResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA592D2518D9AE0025BD63 /* CharacteresResult.swift */; };
+		B8CA59332518DAA20025BD63 /* CharacteresResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA592D2518D9AE0025BD63 /* CharacteresResult.swift */; };
+		B8CA59382518DAAF0025BD63 /* InfoResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA591B2518D9330025BD63 /* InfoResult.swift */; };
 		B8E061FE2503A82F00AC969F /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E061FD2503A82F00AC969F /* MainTableViewCell.swift */; };
 		B8E062002503AA8700AC969F /* NavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E061FF2503AA8700AC969F /* NavigationControllerExtension.swift */; };
 		B8F51CD124FE8AB20093F1D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F51CD024FE8AB20093F1D6 /* AppDelegate.swift */; };
@@ -51,6 +77,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B8CA58832516AF990025BD63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8F51CC524FE8AB20093F1D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8CA58762516AF970025BD63;
+			remoteInfo = RickAndJamesWidgetExtension;
+		};
 		B8F51CE424FE8AB70093F1D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B8F51CC524FE8AB20093F1D6 /* Project object */;
@@ -66,6 +99,20 @@
 			remoteInfo = RickAndJamesTest;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B8CA58862516AF990025BD63 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B8CA58852516AF990025BD63 /* RickAndJamesWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		039C3B502610A32600723279 /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
@@ -97,6 +144,21 @@
 		B88E84742503A4E200CA0C88 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		B88E84762503A5CF00CA0C88 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B88E84792503A6BA00CA0C88 /* MainViewControllerLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerLayout.swift; sourceTree = "<group>"; };
+		B8A4215E25237C3900C5B7E6 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		B8CA58772516AF970025BD63 /* RickAndJamesWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RickAndJamesWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8CA58792516AF970025BD63 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		B8CA587B2516AF970025BD63 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		B8CA587E2516AF970025BD63 /* RickAndJamesWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndJamesWidget.swift; sourceTree = "<group>"; };
+		B8CA58802516AF990025BD63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B8CA58822516AF990025BD63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8CA588E2516AFB40025BD63 /* CharacterEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEntry.swift; sourceTree = "<group>"; };
+		B8CA58A72516B4B10025BD63 /* CharacterProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterProvider.swift; sourceTree = "<group>"; };
+		B8CA58F02518D3CE0025BD63 /* RickAndJamesTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RickAndJamesTest.entitlements; sourceTree = "<group>"; };
+		B8CA59012518D6B70025BD63 /* RickAndJamesWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RickAndJamesWidgetExtension.entitlements; sourceTree = "<group>"; };
+		B8CA590E2518D87F0025BD63 /* DetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailService.swift; sourceTree = "<group>"; };
+		B8CA591B2518D9330025BD63 /* InfoResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoResult.swift; sourceTree = "<group>"; };
+		B8CA59262518D9750025BD63 /* CharacterResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterResult.swift; sourceTree = "<group>"; };
+		B8CA592D2518D9AE0025BD63 /* CharacteresResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteresResult.swift; sourceTree = "<group>"; };
 		B8E061FD2503A82F00AC969F /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		B8E061FF2503AA8700AC969F /* NavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtension.swift; sourceTree = "<group>"; };
 		B8F51CCD24FE8AB20093F1D6 /* RickAndJamesTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndJamesTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +176,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B8CA58742516AF970025BD63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8CA587C2516AF970025BD63 /* SwiftUI.framework in Frameworks */,
+				B8CA587A2516AF970025BD63 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B8F51CCA24FE8AB20093F1D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,6 +303,7 @@
 		B5FADB0E250676FC008983D4 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				B5FADB2425067D6F008983D4 /* API */,
 				B5AA0E952508F51600A6660C /* Mocks */,
 				B5FADB1E2506782B008983D4 /* Extensions */,
 				B5FADB0F25067711008983D4 /* Protocol */,
@@ -266,6 +338,7 @@
 			children = (
 				B5FADB2525067D84008983D4 /* CharacteresAPI.swift */,
 				B5FADB2725067D9D008983D4 /* MainService.swift */,
+				B8CA590E2518D87F0025BD63 /* DetailService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -277,6 +350,7 @@
 				B8F51CDB24FE8AB60093F1D6 /* LaunchScreen.storyboard */,
 				B5FADB2E2506C935008983D4 /* Colors.swift */,
 				B530B0AA250817000031EB41 /* LoadingTableViewCell.swift */,
+				B8A4215E25237C3900C5B7E6 /* Image.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -284,7 +358,6 @@
 		B88E84782503A6AC00CA0C88 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				B5FADB2425067D6F008983D4 /* API */,
 				B8F51CD424FE8AB20093F1D6 /* MainViewController.swift */,
 				B88E84792503A6BA00CA0C88 /* MainViewControllerLayout.swift */,
 				B88E84742503A4E200CA0C88 /* MainViewModel.swift */,
@@ -293,12 +366,53 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		B8A421492523772400C5B7E6 /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Persistance;
+			sourceTree = "<group>";
+		};
+		B8CA58782516AF970025BD63 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B8CA58792516AF970025BD63 /* WidgetKit.framework */,
+				B8CA587B2516AF970025BD63 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8CA587D2516AF970025BD63 /* RickAndJamesWidget */ = {
+			isa = PBXGroup;
+			children = (
+				B8CA587E2516AF970025BD63 /* RickAndJamesWidget.swift */,
+				B8CA58802516AF990025BD63 /* Assets.xcassets */,
+				B8CA58822516AF990025BD63 /* Info.plist */,
+				B8CA588E2516AFB40025BD63 /* CharacterEntry.swift */,
+				B8CA58A72516B4B10025BD63 /* CharacterProvider.swift */,
+			);
+			path = RickAndJamesWidget;
+			sourceTree = "<group>";
+		};
+		B8CA591A2518D9190025BD63 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B8CA591B2518D9330025BD63 /* InfoResult.swift */,
+				B8CA59262518D9750025BD63 /* CharacterResult.swift */,
+				B8CA592D2518D9AE0025BD63 /* CharacteresResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		B8F51CC424FE8AB20093F1D6 = {
 			isa = PBXGroup;
 			children = (
+				B8CA59012518D6B70025BD63 /* RickAndJamesWidgetExtension.entitlements */,
 				B8F51CCF24FE8AB20093F1D6 /* RickAndJamesTest */,
 				B8F51CE624FE8AB70093F1D6 /* RickAndJamesTestTests */,
 				B8F51CF124FE8AB70093F1D6 /* RickAndJamesTestUITests */,
+				B8CA587D2516AF970025BD63 /* RickAndJamesWidget */,
+				B8CA58782516AF970025BD63 /* Frameworks */,
 				B8F51CCE24FE8AB20093F1D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -309,6 +423,7 @@
 				B8F51CCD24FE8AB20093F1D6 /* RickAndJamesTest.app */,
 				B8F51CE324FE8AB70093F1D6 /* RickAndJamesTestTests.xctest */,
 				B8F51CEE24FE8AB70093F1D6 /* RickAndJamesTestUITests.xctest */,
+				B8CA58772516AF970025BD63 /* RickAndJamesWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -316,14 +431,17 @@
 		B8F51CCF24FE8AB20093F1D6 /* RickAndJamesTest */ = {
 			isa = PBXGroup;
 			children = (
+				B8A421492523772400C5B7E6 /* Persistance */,
 				B51D315D25040D6200F3F9D4 /* App */,
 				B51D316A250415BE00F3F9D4 /* Coordinators */,
 				B51D3165250410A300F3F9D4 /* Extensions */,
 				B51D31632504106700F3F9D4 /* Features */,
+				B8CA591A2518D9190025BD63 /* Models */,
 				B5FADB0E250676FC008983D4 /* Network */,
 				B5FADB2D2506C915008983D4 /* Resources */,
 				B51D316025040D9E00F3F9D4 /* Protocols */,
 				B8F51CDE24FE8AB60093F1D6 /* Info.plist */,
+				B8CA58F02518D3CE0025BD63 /* RickAndJamesTest.entitlements */,
 			);
 			path = RickAndJamesTest;
 			sourceTree = "<group>";
@@ -350,6 +468,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B8CA58762516AF970025BD63 /* RickAndJamesWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8CA58892516AF990025BD63 /* Build configuration list for PBXNativeTarget "RickAndJamesWidgetExtension" */;
+			buildPhases = (
+				B8CA58732516AF970025BD63 /* Sources */,
+				B8CA58742516AF970025BD63 /* Frameworks */,
+				B8CA58752516AF970025BD63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RickAndJamesWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = RickAndJamesWidgetExtension;
+			productReference = B8CA58772516AF970025BD63 /* RickAndJamesWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		B8F51CCC24FE8AB20093F1D6 /* RickAndJamesTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8F51CF724FE8AB70093F1D6 /* Build configuration list for PBXNativeTarget "RickAndJamesTest" */;
@@ -357,12 +494,16 @@
 				B8F51CC924FE8AB20093F1D6 /* Sources */,
 				B8F51CCA24FE8AB20093F1D6 /* Frameworks */,
 				B8F51CCB24FE8AB20093F1D6 /* Resources */,
+				B8CA58862516AF990025BD63 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B8CA58842516AF990025BD63 /* PBXTargetDependency */,
 			);
 			name = RickAndJamesTest;
+			packageProductDependencies = (
+			);
 			productName = RickAndJamesTest;
 			productReference = B8F51CCD24FE8AB20093F1D6 /* RickAndJamesTest.app */;
 			productType = "com.apple.product-type.application";
@@ -409,10 +550,13 @@
 		B8F51CC524FE8AB20093F1D6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1150;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Salgado Solutions";
 				TargetAttributes = {
+					B8CA58762516AF970025BD63 = {
+						CreatedOnToolsVersion = 12.0;
+					};
 					B8F51CCC24FE8AB20093F1D6 = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -435,6 +579,8 @@
 				Base,
 			);
 			mainGroup = B8F51CC424FE8AB20093F1D6;
+			packageReferences = (
+			);
 			productRefGroup = B8F51CCE24FE8AB20093F1D6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -442,11 +588,20 @@
 				B8F51CCC24FE8AB20093F1D6 /* RickAndJamesTest */,
 				B8F51CE224FE8AB70093F1D6 /* RickAndJamesTestTests */,
 				B8F51CED24FE8AB70093F1D6 /* RickAndJamesTestUITests */,
+				B8CA58762516AF970025BD63 /* RickAndJamesWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B8CA58752516AF970025BD63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8CA58812516AF990025BD63 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B8F51CCB24FE8AB20093F1D6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -479,10 +634,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B8CA58732516AF970025BD63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8CA59282518D9750025BD63 /* CharacterResult.swift in Sources */,
+				B8CA58CB2516B5920025BD63 /* URLSessionProtocol.swift in Sources */,
+				B8CA58AD2516B5600025BD63 /* ServiceProvider.swift in Sources */,
+				B8CA58942516AFB60025BD63 /* CharacterEntry.swift in Sources */,
+				B8CA59332518DAA20025BD63 /* CharacteresResult.swift in Sources */,
+				B8CA58A22516B3070025BD63 /* NetworkError.swift in Sources */,
+				B8CA59382518DAAF0025BD63 /* InfoResult.swift in Sources */,
+				B8CA58BC2516B5780025BD63 /* ServiceTargetProtocol.swift in Sources */,
+				B8CA58C62516B5850025BD63 /* Keys.swift in Sources */,
+				B8CA587F2516AF970025BD63 /* RickAndJamesWidget.swift in Sources */,
+				B8CA58A82516B4B20025BD63 /* CharacterProvider.swift in Sources */,
+				B8CA59102518D87F0025BD63 /* DetailService.swift in Sources */,
+				B8CA58B22516B5670025BD63 /* Mockable.swift in Sources */,
+				B8A4215925237B8C00C5B7E6 /* UIImageViewExtension.swift in Sources */,
+				B8CA58D02516B5980025BD63 /* URLSessionDataTaskProtocol.swift in Sources */,
+				B8CA58B72516B56D0025BD63 /* CharacteresAPI.swift in Sources */,
+				B8CA58C12516B5800025BD63 /* AppConfigurations.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B8F51CC924FE8AB20093F1D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8CA590F2518D87F0025BD63 /* DetailService.swift in Sources */,
+				B8CA592E2518D9AE0025BD63 /* CharacteresResult.swift in Sources */,
 				B5FADB2C2506854B008983D4 /* UIImageViewExtension.swift in Sources */,
 				B5FADB2325067C54008983D4 /* AppConfigurations.swift in Sources */,
 				B5FADB1725067783008983D4 /* NetworkError.swift in Sources */,
@@ -492,6 +673,7 @@
 				B88E847A2503A6BA00CA0C88 /* MainViewControllerLayout.swift in Sources */,
 				B5AA0E942508F4B600A6660C /* Mockable.swift in Sources */,
 				B5FADB2125067BCB008983D4 /* Keys.swift in Sources */,
+				B8A4215F25237C3900C5B7E6 /* Image.swift in Sources */,
 				B8F51CD524FE8AB20093F1D6 /* MainViewController.swift in Sources */,
 				B51D3167250410BE00F3F9D4 /* MainCoordinator.swift in Sources */,
 				B5FADB19250677A2008983D4 /* URLSession+URLSessionProtocol.swift in Sources */,
@@ -502,6 +684,7 @@
 				B8F51CD124FE8AB20093F1D6 /* AppDelegate.swift in Sources */,
 				B88E84752503A4E200CA0C88 /* MainViewModel.swift in Sources */,
 				B530B0AD250817220031EB41 /* TableViewPagination.swift in Sources */,
+				B8CA591C2518D9330025BD63 /* InfoResult.swift in Sources */,
 				B88E84772503A5CF00CA0C88 /* DetailViewController.swift in Sources */,
 				B5FADB152506776B008983D4 /* URLSessionProtocol.swift in Sources */,
 				B5FADB1B250677BE008983D4 /* URLSessionDataTask+URLSessionDataTaskProtocol.swift in Sources */,
@@ -509,6 +692,7 @@
 				B5FADB2F2506C935008983D4 /* Colors.swift in Sources */,
 				B5FADB312506EE3D008983D4 /* UITableViewExtensions.swift in Sources */,
 				B51D31692504117A00F3F9D4 /* DetailViewModel.swift in Sources */,
+				B8CA59272518D9750025BD63 /* CharacterResult.swift in Sources */,
 				B5FADB2625067D84008983D4 /* CharacteresAPI.swift in Sources */,
 				B51D316225040DB300F3F9D4 /* Coordinator.swift in Sources */,
 				B5FADB1325067757008983D4 /* URLSessionDataTaskProtocol.swift in Sources */,
@@ -536,6 +720,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B8CA58842516AF990025BD63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8CA58762516AF970025BD63 /* RickAndJamesWidgetExtension */;
+			targetProxy = B8CA58832516AF990025BD63 /* PBXContainerItemProxy */;
+		};
 		B8F51CE524FE8AB70093F1D6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B8F51CCC24FE8AB20093F1D6 /* RickAndJamesTest */;
@@ -560,6 +749,54 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B8CA58872516AF990025BD63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = RickAndJamesWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT3YCTX6YE;
+				INFOPLIST_FILE = RickAndJamesWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.salgados.RickAndJamesTest.RickAndJamesWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B8CA58882516AF990025BD63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = RickAndJamesWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT3YCTX6YE;
+				INFOPLIST_FILE = RickAndJamesWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.salgados.RickAndJamesTest.RickAndJamesWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		B8F51CF524FE8AB70093F1D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -615,7 +852,6 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SERVER_URL = "https://rickandmortyapi.com";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -669,7 +905,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SERVER_URL = "https://rickandmortyapi.com";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
@@ -679,8 +914,11 @@
 		B8F51CF824FE8AB70093F1D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RickAndJamesTest/RickAndJamesTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT3YCTX6YE;
 				INFOPLIST_FILE = RickAndJamesTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -698,8 +936,11 @@
 		B8F51CF924FE8AB70093F1D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RickAndJamesTest/RickAndJamesTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT3YCTX6YE;
 				INFOPLIST_FILE = RickAndJamesTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -719,7 +960,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT3YCTX6YE;
 				INFOPLIST_FILE = RickAndJamesTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -729,6 +973,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.salgados.RickAndJamesTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RickAndJamesTest.app/RickAndJamesTest";
@@ -740,7 +986,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT3YCTX6YE;
 				INFOPLIST_FILE = RickAndJamesTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -750,6 +999,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.salgados.RickAndJamesTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RickAndJamesTest.app/RickAndJamesTest";
@@ -761,6 +1012,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT3YCTX6YE;
 				INFOPLIST_FILE = RickAndJamesTestUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -780,6 +1032,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT3YCTX6YE;
 				INFOPLIST_FILE = RickAndJamesTestUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -797,6 +1050,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B8CA58892516AF990025BD63 /* Build configuration list for PBXNativeTarget "RickAndJamesWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8CA58872516AF990025BD63 /* Debug */,
+				B8CA58882516AF990025BD63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B8F51CC824FE8AB20093F1D6 /* Build configuration list for PBXProject "RickAndJamesTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

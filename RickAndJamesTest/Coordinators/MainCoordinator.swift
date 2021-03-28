@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol MainNavigationDelegate: Any {
+protocol MainNavigationDelegate: AnyObject {
     func navigateToDetail(character: CharacterResult)
 }
 
 class MainCoordinator: Coordinator {
     
-    var presenter: UINavigationController
-    var startViewController: UIViewController = UIViewController()
+    private (set) weak var presenter: UINavigationController?
+    private (set) var startViewController: UIViewController = UIViewController()
     
     init(presenter: UINavigationController) {
         self.presenter = presenter
@@ -27,7 +27,7 @@ class MainCoordinator: Coordinator {
         viewModel.delegate = viewController
         
         startViewController = viewController
-        presenter.pushViewController(startViewController, animated: true)
+        presenter?.pushViewController(startViewController, animated: true)
     }
 }
 
@@ -36,7 +36,8 @@ extension MainCoordinator: MainNavigationDelegate {
     func navigateToDetail(character: CharacterResult) {
         let viewModel = DetailViewModel(character: character)
         let controller = DetailViewController(viewModel: viewModel)
+        
         viewModel.delegate = controller
-        presenter.pushViewController(controller, animated: true)
+        presenter?.pushViewController(controller, animated: true)
     }
 }

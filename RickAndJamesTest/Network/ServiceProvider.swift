@@ -19,9 +19,9 @@ enum Credentials {
 
 class ServiceProvider {
     
-    private var session: URLSessionProtocol
+    private var session: URLSession
     
-    init(session: URLSessionProtocol = URLSession.shared) {
+    init(session: URLSession = URLSession.shared) {
         self.session = session
     }
     
@@ -44,7 +44,7 @@ class ServiceProvider {
         }
         
         let urlRequest = URLRequest(url: componentURL)
-        let session = self.session.dataTask(request: urlRequest) { (data, response, error) in
+        let session = self.session.dataTask(with: urlRequest) { (data, response, error) in
             self.debugResponse(request: urlRequest, data: data)
             if let error = error {
                 completion(.failure(.connectionFailure(error)))
