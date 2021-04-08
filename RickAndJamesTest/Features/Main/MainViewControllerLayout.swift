@@ -12,6 +12,8 @@ protocol MainViewControllerLayoutProtocol {
     func reloadData()
 }
 
+typealias TableViewProtocol = (UITableViewDelegate & UITableViewDataSource)
+
 class MainViewControllerLayout: UIView, MainViewControllerLayoutProtocol {
     
     struct Actions {
