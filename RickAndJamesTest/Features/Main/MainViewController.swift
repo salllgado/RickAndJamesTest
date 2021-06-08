@@ -30,10 +30,6 @@ final class MainViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func loadView() {
-        setupNavigationBar()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "The rick and morty api"
@@ -50,13 +46,6 @@ final class MainViewController: UIViewController {
         viewModel.fetchData()
     }
     
-    private func setupNavigationBar() {
-        navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.kern: 0.0,
-            NSAttributedString.Key.foregroundColor: Colors.navBarTitleColor.uiColor,
-        ]
-    }
-    
     // MARK: - Actions
     func actionRefreshData() {
         self.viewModel.refreshData()
@@ -64,6 +53,11 @@ final class MainViewController: UIViewController {
     
     @objc private func refreshData(_ refreshControl: UIRefreshControl) {
         viewModel.refreshData()
+    }
+    
+    // MARK: - Routing
+    func navigateToDetail(_ character: CharacterResult) {
+        navigationDelegate?.navigateToDetail(character: character)
     }
 }
 
@@ -75,8 +69,8 @@ extension MainViewController: MainViewControllerDelegate {
         loadingView.stopAnimating()
     }
     
-    func navigateToDetail(_ character: CharacterResult) {
-        navigationDelegate?.navigateToDetail(character: character)
+    func displayCharacter(_ character: CharacterResult) {
+        navigateToDetail(character)
     }
 }
 

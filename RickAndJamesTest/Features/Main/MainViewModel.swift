@@ -16,11 +16,13 @@ protocol MainViewModable: class {
     var delegate: MainViewControllerDelegate? { get set }
     
     func fetchData()
+    func checkForWidgetSelection()
     func refreshData()
 }
 
 protocol MainViewControllerDelegate: class {
     func reloadUI()
+    func displayCharacter(_ character: CharacterResult)
 }
 
 final class MainViewModel: MainViewModable, TableViewPagination {
@@ -49,6 +51,9 @@ final class MainViewModel: MainViewModable, TableViewPagination {
                 
                 DispatchQueue.main.async {
                     self?.delegate?.reloadUI()
+                    
+                    // check for widget selection
+                    self?.checkForWidgetSelection()
                 }
             case .failure(let err):
                 debugPrint(err)
@@ -79,6 +84,18 @@ final class MainViewModel: MainViewModable, TableViewPagination {
             case .failure(let err):
                 debugPrint(err)
             }
+        }
+    }
+    
+    func checkForWidgetSelection() {
+        let id = UserDefaults.standard.integer(forKey: "charactedIdToOpenFromWidget")
+        UserDefaults.standard.setValue(0, forKey: "charactedIdToOpenFromWidget")
+        let widgetSelection = self.characteres.filter({ (character) -> Bool in
+            character.id == id
+        }).first
+        
+        if let _widgetSelectionCharacter = widgetSelection {
+            self.delegate?.displayCharacter(_widgetSelectionCharacter)
         }
     }
 }

@@ -43,6 +43,7 @@ struct RickAndJamesWidgetEntryView : View {
         })
         .background(LinearGradient(gradient: Gradient(colors: [.gray, .black]), startPoint: .leading, endPoint: .trailing))
         .cornerRadius(8)
+        .widgetURL(entry.character.widgetURL)
     }
     
     func getImage() -> UIImage {
