@@ -13,12 +13,12 @@ struct CharacterProvider: TimelineProvider {
     typealias Entry = CharacterEntry
     
     func placeholder(in context: Context) -> CharacterEntry {
-        let fakeCharacter = CharacterResult(id: 1, name: "Some name", status: "Alive", species: "Human", gender: "Male", image: "none", location: CharacterLocationResult(name: "Earth"))
+        let fakeCharacter = CharacterResult.getDummy()
         return CharacterEntry(date: Date(), character: fakeCharacter)
     }
     
     func getSnapshot(in context: Context, completion: @escaping (CharacterEntry) -> Void) {
-        let fakeCharacter = CharacterResult(id: 1, name: "Some name", status: "Alive", species: "Human", gender: "Male", image: "none", location: CharacterLocationResult(name: "Earth"))
+        let fakeCharacter = CharacterResult.getDummy()
         let entry = CharacterEntry(date: Date(), character: fakeCharacter)
         completion(entry)
     }
@@ -27,10 +27,10 @@ struct CharacterProvider: TimelineProvider {
         let currentDate = Date()
         let refreshData = Calendar.current.date(byAdding: .minute, value: 1, to: currentDate)!
         
-        let defaults = UserDefaults(suiteName: "group.rickAndJamesApp")
+        let defaults = UserDefaults(suiteName: Constants.UserDefaultsKeys.suiteName)
         
-        guard let characterId = defaults?.value(forKey: "lastCharactedId") as? Int  else {
-            let character = CharacterResult(id: 1, name: "None", status: "None", species: "None", gender: "None", image: "None", location: CharacterLocationResult(name: "None"))
+        guard let characterId = defaults?.value(forKey: Constants.UserDefaultsKeys.characterId) as? Int  else {
+            let character = CharacterResult.getDummy()
             let entry = CharacterEntry(date: currentDate, character: character)
             let timeline = Timeline(entries: [entry], policy: .after(refreshData))
             completion(timeline)
@@ -47,7 +47,7 @@ struct CharacterProvider: TimelineProvider {
                 character = characterResult
                 break
             case .failure(let error):
-                character = CharacterResult(id: 1, name: "None", status: "None", species: "None", gender: "None", image: "None", location: CharacterLocationResult(name: "None"))
+                character = CharacterResult.getEmpty()
                 print(error)
             }
             

@@ -23,8 +23,7 @@ protocol MainViewControllerDelegate: class {
     func reloadUI()
 }
 
-class MainViewModel: MainViewModable, TableViewPagination {
-    
+final class MainViewModel: MainViewModable, TableViewPagination {
     var characteres: [CharacterResult] = []
     var nextPage: Bool = false
     var shouldShowLoadingCell: Bool = true
@@ -39,7 +38,7 @@ class MainViewModel: MainViewModable, TableViewPagination {
     }
     
     func fetchData() {
-        service.getCharacteres(page: currentPage) { [ weak self ] (result) in
+        service.getCharacteres(page: currentPage) { [weak self] (result) in
             switch result {
             case .success(let successResult):
                 debugPrint(successResult)
@@ -65,7 +64,7 @@ class MainViewModel: MainViewModable, TableViewPagination {
     func fetchNextData() {
         currentPage += 1
         
-        service.getCharacteres(page: currentPage) { [ weak self ] (result) in
+        service.getCharacteres(page: currentPage) { [weak self] (result) in
             switch result {
             case .success(let successResult):
                 debugPrint(successResult)
