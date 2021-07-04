@@ -8,20 +8,13 @@
 
 import UIKit
 
-protocol MainViewControllerLayoutProtocol {
+protocol MainViewControllerLayoutProtocol where Self: UIView {
     func reloadData()
 }
 
 typealias TableViewProtocol = (UITableViewDelegate & UITableViewDataSource)
 
-class MainViewControllerLayout: UIView, MainViewControllerLayoutProtocol {
-    
-    struct Actions {
-        let actionRefreshData: ()->Void
-    }
-    
-    private var controller: TableViewProtocol
-    private let actions: Actions
+final class MainViewControllerLayout: UIView, MainViewControllerLayoutProtocol {
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -39,6 +32,14 @@ class MainViewControllerLayout: UIView, MainViewControllerLayoutProtocol {
         
         return refreshControl
     }()
+    
+    struct Actions {
+        let actionRefreshData: ()->Void
+    }
+    
+    
+    private var controller: TableViewProtocol
+    private let actions: Actions
     
     init(
         viewController: TableViewProtocol,

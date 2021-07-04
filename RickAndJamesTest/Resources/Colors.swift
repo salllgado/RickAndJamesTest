@@ -9,10 +9,13 @@
 import UIKit
 
 enum Colors {
+    case navBarTitleColor
     case tableViewBackgroundColor
     
     var uiColor: UIColor {
         switch self {
+        case .navBarTitleColor:
+            return UIColor(named: "nav_bar_title") ?? UIColor.white
         case .tableViewBackgroundColor:
             return UIColor(named: "table_view_bg") ?? UIColor.darkGray
         }

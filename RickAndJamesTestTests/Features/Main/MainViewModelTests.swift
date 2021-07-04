@@ -9,7 +9,7 @@
 import XCTest
 @testable import RickAndJamesTest
 
-class MainViewModelTests: XCTestCase {
+final class MainViewModelTests: XCTestCase {
     
     func testMainViewModelFetchData() {
         

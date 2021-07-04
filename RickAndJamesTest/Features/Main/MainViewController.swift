@@ -8,15 +8,19 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
     
-    private var viewModel: (MainViewModable & TableViewPagination) = MainViewModel()
-    private let navigationDelegate: MainNavigationDelegate?
     private lazy var loadingView: UIActivityIndicatorView = {
         self.setLoadingView()
     }()
     
-    init(viewModel: (MainViewModable & TableViewPagination) = MainViewModel(), navigationDelegate: MainNavigationDelegate?) {
+    private let viewModel: (MainViewModable & TableViewPagination)
+    private let navigationDelegate: MainNavigationDelegate?
+    
+    init(
+        viewModel: (MainViewModable & TableViewPagination) = MainViewModel(),
+        navigationDelegate: MainNavigationDelegate?
+    ) {
         self.viewModel = viewModel
         self.navigationDelegate = navigationDelegate
         super.init(nibName: nil, bundle: nil)
@@ -32,7 +36,8 @@ class MainViewController: UIViewController {
         
         let layout = MainViewControllerLayout(
             viewController: self,
-            actions: .init(actionRefreshData: actionRefreshData))
+            actions: .init(actionRefreshData: actionRefreshData)
+        )
 
         UITableView.shouldShowLoadingCell = viewModel.shouldShowLoadingCell
         view = layout
@@ -41,12 +46,18 @@ class MainViewController: UIViewController {
         viewModel.fetchData()
     }
     
+    // MARK: - Actions
     func actionRefreshData() {
         self.viewModel.refreshData()
     }
     
     @objc private func refreshData(_ refreshControl: UIRefreshControl) {
         viewModel.refreshData()
+    }
+    
+    // MARK: - Routing
+    func navigateToDetail(_ character: CharacterResult) {
+        navigationDelegate?.navigateToDetail(character: character)
     }
 }
 
@@ -58,8 +69,8 @@ extension MainViewController: MainViewControllerDelegate {
         loadingView.stopAnimating()
     }
     
-    func navigateToDetail(_ character: CharacterResult) {
-        navigationDelegate?.navigateToDetail(character: character)
+    func displayCharacter(_ character: CharacterResult) {
+        navigateToDetail(character)
     }
 }
 

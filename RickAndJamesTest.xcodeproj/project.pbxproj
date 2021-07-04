@@ -42,6 +42,9 @@
 		B88E847A2503A6BA00CA0C88 /* MainViewControllerLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E84792503A6BA00CA0C88 /* MainViewControllerLayout.swift */; };
 		B8A4215925237B8C00C5B7E6 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FADB2B2506854B008983D4 /* UIImageViewExtension.swift */; };
 		B8A4215F25237C3900C5B7E6 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A4215E25237C3900C5B7E6 /* Image.swift */; };
+		B8A5E2A9266F5E0D00C5A64F /* CharacterResultDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A5E2A8266F5E0D00C5A64F /* CharacterResultDummy.swift */; };
+		B8A5E2BB266F5FD000C5A64F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A5E2BA266F5FD000C5A64F /* Constants.swift */; };
+		B8A5E2C0266F600700C5A64F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A5E2BA266F5FD000C5A64F /* Constants.swift */; };
 		B8CA587A2516AF970025BD63 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8CA58792516AF970025BD63 /* WidgetKit.framework */; };
 		B8CA587C2516AF970025BD63 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8CA587B2516AF970025BD63 /* SwiftUI.framework */; };
 		B8CA587F2516AF970025BD63 /* RickAndJamesWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CA587E2516AF970025BD63 /* RickAndJamesWidget.swift */; };
@@ -145,6 +148,8 @@
 		B88E84762503A5CF00CA0C88 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B88E84792503A6BA00CA0C88 /* MainViewControllerLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerLayout.swift; sourceTree = "<group>"; };
 		B8A4215E25237C3900C5B7E6 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		B8A5E2A8266F5E0D00C5A64F /* CharacterResultDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterResultDummy.swift; sourceTree = "<group>"; };
+		B8A5E2BA266F5FD000C5A64F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B8CA58772516AF970025BD63 /* RickAndJamesWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RickAndJamesWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8CA58792516AF970025BD63 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		B8CA587B2516AF970025BD63 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -349,6 +354,7 @@
 				B8F51CD924FE8AB60093F1D6 /* Assets.xcassets */,
 				B8F51CDB24FE8AB60093F1D6 /* LaunchScreen.storyboard */,
 				B5FADB2E2506C935008983D4 /* Colors.swift */,
+				B8A5E2BA266F5FD000C5A64F /* Constants.swift */,
 				B530B0AA250817000031EB41 /* LoadingTableViewCell.swift */,
 				B8A4215E25237C3900C5B7E6 /* Image.swift */,
 			);
@@ -364,13 +370,6 @@
 				B8E061FD2503A82F00AC969F /* MainTableViewCell.swift */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		B8A421492523772400C5B7E6 /* Persistance */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Persistance;
 			sourceTree = "<group>";
 		};
 		B8CA58782516AF970025BD63 /* Frameworks */ = {
@@ -390,6 +389,7 @@
 				B8CA58822516AF990025BD63 /* Info.plist */,
 				B8CA588E2516AFB40025BD63 /* CharacterEntry.swift */,
 				B8CA58A72516B4B10025BD63 /* CharacterProvider.swift */,
+				B8A5E2A8266F5E0D00C5A64F /* CharacterResultDummy.swift */,
 			);
 			path = RickAndJamesWidget;
 			sourceTree = "<group>";
@@ -431,7 +431,6 @@
 		B8F51CCF24FE8AB20093F1D6 /* RickAndJamesTest */ = {
 			isa = PBXGroup;
 			children = (
-				B8A421492523772400C5B7E6 /* Persistance */,
 				B51D315D25040D6200F3F9D4 /* App */,
 				B51D316A250415BE00F3F9D4 /* Coordinators */,
 				B51D3165250410A300F3F9D4 /* Extensions */,
@@ -639,6 +638,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8CA59282518D9750025BD63 /* CharacterResult.swift in Sources */,
+				B8A5E2C0266F600700C5A64F /* Constants.swift in Sources */,
 				B8CA58CB2516B5920025BD63 /* URLSessionProtocol.swift in Sources */,
 				B8CA58AD2516B5600025BD63 /* ServiceProvider.swift in Sources */,
 				B8CA58942516AFB60025BD63 /* CharacterEntry.swift in Sources */,
@@ -646,6 +646,7 @@
 				B8CA58A22516B3070025BD63 /* NetworkError.swift in Sources */,
 				B8CA59382518DAAF0025BD63 /* InfoResult.swift in Sources */,
 				B8CA58BC2516B5780025BD63 /* ServiceTargetProtocol.swift in Sources */,
+				B8A5E2A9266F5E0D00C5A64F /* CharacterResultDummy.swift in Sources */,
 				B8CA58C62516B5850025BD63 /* Keys.swift in Sources */,
 				B8CA587F2516AF970025BD63 /* RickAndJamesWidget.swift in Sources */,
 				B8CA58A82516B4B20025BD63 /* CharacterProvider.swift in Sources */,
@@ -687,6 +688,7 @@
 				B8CA591C2518D9330025BD63 /* InfoResult.swift in Sources */,
 				B88E84772503A5CF00CA0C88 /* DetailViewController.swift in Sources */,
 				B5FADB152506776B008983D4 /* URLSessionProtocol.swift in Sources */,
+				B8A5E2BB266F5FD000C5A64F /* Constants.swift in Sources */,
 				B5FADB1B250677BE008983D4 /* URLSessionDataTask+URLSessionDataTaskProtocol.swift in Sources */,
 				B5FADB1D250677E5008983D4 /* ServiceProvider.swift in Sources */,
 				B5FADB2F2506C935008983D4 /* Colors.swift in Sources */,
@@ -759,7 +761,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HT3YCTX6YE;
 				INFOPLIST_FILE = RickAndJamesWidget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -769,7 +771,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -783,7 +785,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HT3YCTX6YE;
 				INFOPLIST_FILE = RickAndJamesWidget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -793,7 +795,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -920,7 +922,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HT3YCTX6YE;
 				INFOPLIST_FILE = RickAndJamesTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -942,7 +944,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HT3YCTX6YE;
 				INFOPLIST_FILE = RickAndJamesTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

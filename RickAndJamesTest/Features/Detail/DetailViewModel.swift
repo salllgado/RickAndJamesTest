@@ -33,10 +33,8 @@ class DetailViewModel: DetailViewModable {
     func fetchData() {
         delegate?.reloadUI()
         
-        let defaults = UserDefaults(suiteName: "group.rickAndJamesApp")
-        defaults?.setValue(character.id, forKey: "lastCharactedId")
-        
-        print("Value saved")
+        let defaults = UserDefaults(suiteName: Constants.UserDefaultsKeys.suiteName)
+        defaults?.setValue(character.id, forKey: Constants.UserDefaultsKeys.characterId)
         
         reloadWidgetIfNeeded()
     }

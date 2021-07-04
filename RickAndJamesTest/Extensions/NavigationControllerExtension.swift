@@ -25,7 +25,7 @@ extension UIViewController {
 extension UINavigationController {
     
     func setNavigationTheme() {
-        self.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        self.navigationBar.titleTextAttributes = [.foregroundColor: Colors.navBarTitleColor.uiColor]
         self.navigationBar.barTintColor = Colors.tableViewBackgroundColor.uiColor
         self.navigationBar.tintColor = .white
     }
