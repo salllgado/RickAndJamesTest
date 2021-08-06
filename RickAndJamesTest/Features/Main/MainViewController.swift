@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreServices
 
 final class MainViewController: UIViewController {
     
@@ -38,7 +39,7 @@ final class MainViewController: UIViewController {
             viewController: self,
             actions: .init(actionRefreshData: actionRefreshData)
         )
-
+        
         UITableView.shouldShowLoadingCell = viewModel.shouldShowLoadingCell
         view = layout
         
@@ -105,5 +106,37 @@ extension MainViewController {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         navigateToDetail(viewModel.characteres[indexPath.row])
+        
+        //        let documentPicker = UIDocumentPickerViewController(
+        //            documentTypes: [
+        //                String(kUTTypePNG),
+        //                String(kUTTypeLog),
+        //                String(kUTTypeArchive),
+        //                String(kUTTypeData),
+        //                String(kUTTypePDF),
+        //                String(kUTTypeZipArchive)
+        //            ], in: .import)
+        //        documentPicker.delegate = self
+        //        documentPicker.allowsMultipleSelection = false
+        //        documentPicker.modalPresentationStyle = .fullScreen
+        //        present(documentPicker, animated: true, completion: nil)
+    }
+}
+
+extension MainViewController: UIDocumentPickerDelegate {
+    
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        do {
+            let data = try Data(contentsOf: urls[0])
+            print(data)
+        } catch {
+            let alert = UIAlertController(title: "Erro ao recuperar o arquivo", message: nil, preferredStyle: .alert)
+            alert.addAction(.init(title: "ok", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
+        // ...
     }
 }
